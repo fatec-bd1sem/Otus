@@ -1,3 +1,5 @@
+from tkinter import *
+from tkcalendar import Calendar
 def agenda():
     print('abrindo agenda...')
 
