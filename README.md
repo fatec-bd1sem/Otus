@@ -1,3 +1,7 @@
+<h1>Projeto Integrado: API</h1>
+Declaração de visão do Projeto<br>
+Tema do projeto: Assistente Pessoal Virtual<br>
+<br>
 
 <details>
 <summary><b>Tutorial para rodar o Projeto</b></summary>
@@ -42,11 +46,6 @@ pip install tkcalendar
 4. Execute o arquivo principal.py na pasta Projeto-Integrador-Fatec 
 
 </details>
-
-<h1>Projeto Integrado: API</h1>
-Declaração de visão do Projeto<br>
-Tema do projeto: Assistente Pessoal Virtual<br>
-<br>
 
 ## Atribuições:
  - Responder a comandos de voz ou sons específicos<br>
