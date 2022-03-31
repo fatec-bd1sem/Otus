@@ -1,0 +1,24 @@
+{
+  "30/03/2022": [
+    {
+      "tecnologia": "teste",
+      "horas": 6
+    }
+  ],
+  "313/03/2022": [
+    {
+      "tecnologia": "python",
+      "horas": 78
+    }
+  ],
+  "01/04/2022": [
+    {
+      "tecnologia": "sql",
+      "horas": 4
+    },
+    {
+      "tecnologia": "c#",
+      "horas": 5
+    }
+  ]
+}
