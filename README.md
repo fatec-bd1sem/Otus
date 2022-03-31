@@ -33,3 +33,48 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  - [Gabriel](https://github.com/DevBielgrazi)<br>
  - [Guilherme](https://github.com/1SGuilherme)<br>
  - [Wallace Honorato](https://github.com/WallaceHS20)<br>
+
+<br>
+<details>
+<summary><b>Tutorial para rodar o Projeto</b></summary>
+  
+1. Clone o projeto
+```
+git clone https://github.com/fatec-bd1sem/Projeto-Integrador-Fatec.git
+```
+
+2. Baixe o PyAudio para sua versão do python [nesse link](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio)
+
+>De acordo com suas configurações<br>
+![image](https://user-images.githubusercontent.com/59184811/160920480-39c560db-9320-4381-a883-8ada2a3448b2.png)
+
+
+3. Na pasta onde foi feito o download, instale as bibliotecas com os comandos abaixo
+```
+pip install PyAudio-0.2.11-cp310-cp310-win_amd64.whl
+```
+
+```
+pip install SpeechRecognition
+```
+
+```
+pip install keyboard
+```
+
+```
+pip install pyttsx3
+```
+
+```
+pip install tkinter
+```
+
+```
+pip install tkcalendar
+```
+
+
+4. Execute o arquivo principal.py na pasta Projeto-Integrador-Fatec 
+
+</details>
