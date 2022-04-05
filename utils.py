@@ -61,6 +61,19 @@ def ouvir():
                     print("erro")
                     pass
 
+#FUNÇÕES DE TAREFAS -------------------------------------------------
+def informacoes_agenda():
+    #abre arquivo .json com informações
+    with open('dados_agenda.json','r') as file:
+        import json
+        dados_agenda = file.read()
+        dados_agenda = json.loads(dados_agenda)
+    #retorna informações
+    return dados_agenda
+
+
+
+
 #FUNÇÕES DE NOTIFICAÇÃO -------------------------------------------------
 def notificar(titulo, texto):
     import subprocess
@@ -81,17 +94,6 @@ def notificar(titulo, texto):
     """
     process=subprocess.Popen(["powershell","& {" + comando + "}"],stdout=subprocess.PIPE);
 
-def informacoes_data(data):
-    #abre arquivo .json com informações
-    with open('dados_agenda.json','r') as file:
-        import json
-        dados_agenda = file.read()
-        dados_agenda = json.loads(dados_agenda)
-        #pega informação do dia recebido
-        dia_infos = dados_agenda[data]
-    #retorna informações
-    return dia_infos
-
 def notificar_lembretes_hoje():
     from datetime import date
     #pega dia atual
@@ -101,7 +103,8 @@ def notificar_lembretes_hoje():
     #inicia lembrete
     lembrete = 'Lembre-se de:\n'
     #pega informações da data de hoje
-    data_infos = informacoes_data(hoje)
+    data_infos = informacoes_agenda()
+    data_infos = data_infos[hoje]
     #para cada atividade, adiciona ao lembrete final
     for atividade in data_infos:
         tecnologia = atividade['tecnologia']
