@@ -1,4 +1,14 @@
 #FUNÇÕES DE VOZ ------------------------------------------------------
+
+def tocar(audio):
+    from pygame import mixer 
+    import pathlib
+    caminho_pasta = str(pathlib.Path().resolve())
+    caminho_audio = f"{caminho_pasta}\Audios\{audio}"
+    mixer.init()
+    mixer.music.load(caminho_audio)
+    mixer.music.play()
+
 def falar(frase):
     #iniciando fala
     engine = pyttsx3.init()
@@ -11,7 +21,7 @@ def procurar_comando(frase):
     from desempenho import desempenho
     from quiz import quiz
 
-    comandos = ['agenda','desempenho','quiz']
+    comandos = ['agenda','desempenho','questionário']
     funcoes = [agenda, desempenho, quiz]
 
     encontrado = False
@@ -23,6 +33,8 @@ def procurar_comando(frase):
     for palavra in palavras:
         #verifica se a palavra é um comando
         if palavra in comandos:
+            #toca som de finalização
+            tocar('success.mp3')
             #encontra número do comando na lista
             numero_comando = comandos.index(palavra)
             #executa comando 
@@ -104,13 +116,15 @@ def notificar_lembretes_hoje():
     lembrete = 'Lembre-se de:\n'
     #pega informações da data de hoje
     data_infos = informacoes_agenda()
-    data_infos = data_infos[hoje]
-    #para cada atividade, adiciona ao lembrete final
-    for atividade in data_infos:
-        tecnologia = atividade['tecnologia']
-        horas = atividade['horas']
-        lembrete += f"> estudar {tecnologia} por {horas} horas\n"
-    #notifica lembrete final
-    notificar("Lembrete",lembrete)
+    #verifica se data existe no json
+    if (hoje in data_infos):
+        data_infos = data_infos[hoje]
+        #para cada atividade, adiciona ao lembrete final
+        for atividade in data_infos:
+            tecnologia = atividade['tecnologia']
+            horas = atividade['horas']
+            lembrete += f"> estudar {tecnologia} por {horas} horas\n"
+        #notifica lembrete final
+        notificar("Lembrete",lembrete)
 
 
