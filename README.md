@@ -39,6 +39,10 @@ pip install tk
 ```
 
 ```
+pip install ttkthemes
+```
+
+```
 pip install tkcalendar
 ```
   
