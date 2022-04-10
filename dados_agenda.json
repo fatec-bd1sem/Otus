@@ -2,23 +2,27 @@
   "30/03/2022": [
     {
       "tecnologia": "teste",
-      "horas": 6
+      "horas": 6,
+      "feito": "S"
     }
   ],
-  "313/03/2022": [
+  "31/03/2022": [
     {
       "tecnologia": "python",
-      "horas": 78
+      "horas": 2,
+      "feito": "S"
     }
   ],
   "01/04/2022": [
     {
       "tecnologia": "sql",
-      "horas": 4
+      "horas": 4,
+      "feito": "N"
     },
     {
       "tecnologia": "c#",
-      "horas": 5
+      "horas": 5,
+      "feito": "N"
     }
   ]
 }

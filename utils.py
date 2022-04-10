@@ -131,7 +131,7 @@ def enviar_tarefa():
         dados_agenda[data] =[
         {"tarefa" : tarefa,
          "tempo" : tempo,
-         "estudado" : ""}
+         "feito" : "N"}
         ]
         json.dump(dados_agenda, out, ensure_ascii=False, indent=3, separators=(',',':'))
     shutil.move(out.name, 'dados_agenda.json')
@@ -186,4 +186,8 @@ def notificar_lembretes_hoje():
             horas = atividade['horas']
             lembrete += f"> estudar {tecnologia} por {horas} horas\n"
         #notifica lembrete final
+<<<<<<< HEAD
         notificar("Lembrete",lembrete)
+=======
+        notificar("Lembrete",lembrete)
+>>>>>>> 9abce145241cd5a77d8953d86f3502aef73c3110
