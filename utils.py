@@ -179,4 +179,3 @@ def notificar_lembretes_hoje():
             lembrete += f"> estudar {tecnologia} por {horas} horas\n"
         #notifica lembrete final
         notificar("Lembrete",lembrete)
-informacoes_agenda()
