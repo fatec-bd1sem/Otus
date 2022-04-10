@@ -101,7 +101,7 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  - [Breno do Nascimento](https://github.com/Breno30)<br>
  - [Carlos Torres](https://github.com/CarlosTorres2305)<br>
  - [Davi Gusmão](https://github.com/Davign10)<br>
- - [Gabriel](https://github.com/DevBielgrazi)<br>
+ - [Gabriel Vieira](https://github.com/DevBielgrazi)<br>
  - [Guilherme Santana](https://github.com/1SGuilherme)<br>
  - [Wallace Honorato](https://github.com/WallaceHS20)<br>
 
