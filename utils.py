@@ -186,8 +186,5 @@ def notificar_lembretes_hoje():
             horas = atividade['horas']
             lembrete += f"> estudar {tecnologia} por {horas} horas\n"
         #notifica lembrete final
-<<<<<<< HEAD
         notificar("Lembrete",lembrete)
-=======
-        notificar("Lembrete",lembrete)
->>>>>>> 9abce145241cd5a77d8953d86f3502aef73c3110
+
