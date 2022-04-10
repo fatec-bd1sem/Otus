@@ -99,8 +99,17 @@ def ouvir():
                     pass
 
 #FUNÇÕES DE TAREFAS -------------------------------------------------
-#Passar informações para json
 def informacoes_agenda():
+    #abre arquivo .json com informações
+    with open('dados_agenda.json','r') as file:
+        import json
+        dados_agenda = file.read()
+        dados_agenda = json.loads(dados_agenda)
+    #retorna informações
+    return dados_agenda
+
+#Passar informações para json
+def enviar_tarefa():
     from agenda import coletar_dia,coletar_tarefa,coletar_tempo
     import json
     import shutil
@@ -126,7 +135,6 @@ def informacoes_agenda():
         ]
         json.dump(dados_agenda, out, ensure_ascii=False, indent=3, separators=(',',':'))
     shutil.move(out.name, 'dados_agenda.json')
-    return dados_agenda
 
 #Janela de pergunta    
 def agendar_tarefa(janela, pergunta):
@@ -179,4 +187,3 @@ def notificar_lembretes_hoje():
             lembrete += f"> estudar {tecnologia} por {horas} horas\n"
         #notifica lembrete final
         notificar("Lembrete",lembrete)
-informacoes_agenda()
