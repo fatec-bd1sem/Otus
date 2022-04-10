@@ -1,33 +1,46 @@
-from tkinter import *
-from tkcalendar import Calendar
+#Ouvindo dia
+def coletar_dia():
+    from utils import ouvir
+    dia = str(ouvir())
+    return dia
+
+#Ouvindo tarefa
+def coletar_tarefa():
+    from utils import ouvir
+    tarefa = str(ouvir())
+    return tarefa
+
+#Ouvindo Tempo
+def coletar_tempo():
+    from utils import ouvir
+    tempo = str(ouvir())
+    return tempo
+
 def agenda():
-    print('abrindo agenda...')
+    from threading import Thread
+    from ttkthemes import ThemedTk
+    from utils import agendar_tarefa
 
-    #create the gui object
-    tk = Tk()
+    #Tema interface
+    janela = ThemedTk(theme="arc")
 
-    #geometry of the GUI Interface
-    tk.geometry("400x400")
+    #Tamanho interface
+    janela.geometry('250x100')
 
-    #add the Calendar module
-    cal = Calendar(tk, selectmode='day',
-                   year=2022, month=1,
-                   day=11)
-
-    cal.pack(pady=20, fill="both", expand=True)
-
-
-    #function to grab the selected date
-    def grad_date():
-        date.config(text="Selected Date is: " + cal.get_date())
-
-
-    #adding button and label
-    Button(tk, text="Get Date",
-           command=grad_date).pack(pady=20)
-
-    date = Label(tk, text="")
-    date.pack(pady=20)
-
-    #Execute Tkinter
-    tk.mainloop()
+    #Pergunta dia 
+    agendar_tarefa(janela,"Qual dia deseja estudar?")
+    Thread(target=lambda:coletar_dia()).start()
+    janela.mainloop()
+    
+    #Pergunta tarefa após receber dia
+    if coletar_dia() != "":
+        janela.destroy()
+        agendar_tarefa(janela,"Qual tarefa deseja estudar?")
+        Thread(target=lambda:coletar_tarefa()).start()
+        janela.mainloop()
+        #Pergunta tempo após receber tarefa
+        if coletar_tarefa() != "":
+            janela.destroy()
+        agendar_tarefa(janela,"Quanto tempo deseja estudar?")
+        Thread(target=lambda:coletar_tempo()).start()
+        janela.mainloop()
