@@ -99,17 +99,45 @@ def ouvir():
                     pass
 
 #FUNÇÕES DE TAREFAS -------------------------------------------------
+#Passar informações para json
 def informacoes_agenda():
-    #abre arquivo .json com informações
-    with open('dados_agenda.json','r') as file:
-        import json
-        dados_agenda = file.read()
-        dados_agenda = json.loads(dados_agenda)
-    #retorna informações
+    from agenda import coletar_dia,coletar_tarefa,coletar_tempo
+    import json
+    import shutil
+    import tempfile
+    from datetime import datetime
+    #Pegando data atual
+    mes = str(datetime.today().strftime('%m'))
+    ano = str(datetime.today().strftime('%Y'))
+    #Pegando do arquivo agenda
+    dia = coletar_dia()
+    data = str(f"{dia}/{mes}/{ano}")
+    tarefa = coletar_tarefa()
+    tempo = coletar_tempo()
+    #Pegando arquivo json antigo
+    with open("dados_agenda.json", "r", encoding='utf-8') as file, \
+        tempfile.NamedTemporaryFile('w', delete=False) as out:
+        dados_agenda = json.load(file)
+        #Enviando para arquivo json
+        dados_agenda[data] =[
+        {"tarefa" : tarefa,
+         "tempo" : tempo,
+         "estudado" : ""}
+        ]
+        json.dump(dados_agenda, out, ensure_ascii=False, indent=3, separators=(',',':'))
+    shutil.move(out.name, 'dados_agenda.json')
     return dados_agenda
 
-
-
+#Janela de pergunta    
+def agendar_tarefa(janela, pergunta):
+    from tkinter import ttk
+    #Limpa tela
+    for componente in janela.winfo_children():
+        componente.destroy()
+        
+    #Formatacao e fonte pergunta
+    label_pergunta = ttk.Label(janela, text=pergunta,font = ('Helvetica', 15, 'bold'))
+    label_pergunta.place(relx=0.5, rely=0.5, anchor='center')
 
 #FUNÇÕES DE NOTIFICAÇÃO -------------------------------------------------
 def notificar(titulo, texto):
@@ -151,5 +179,4 @@ def notificar_lembretes_hoje():
             lembrete += f"> estudar {tecnologia} por {horas} horas\n"
         #notifica lembrete final
         notificar("Lembrete",lembrete)
-
-
+informacoes_agenda()
