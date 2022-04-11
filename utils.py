@@ -99,6 +99,19 @@ def ouvir():
                     pass
 
 #FUNÇÕES DE TAREFAS -------------------------------------------------
+def marcar_tarefa_feita(dia, index_tarefa):
+    import json
+    #importa dados da agenda
+    dados = informacoes_agenda()
+    #marca tarefa como feita
+    dados[dia][index_tarefa]['feito'] = 'S'
+    #transforma em string
+    dados = json.dumps(dados)
+    #grava novo json no arquivo
+    with open('dados_agenda.json', 'w') as dados_agenda:
+        dados_agenda.write(dados)
+        print(dados)
+        
 def informacoes_agenda():
     #abre arquivo .json com informações
     with open('dados_agenda.json','r') as file:
@@ -148,24 +161,30 @@ def agendar_tarefa(janela, pergunta):
     label_pergunta.place(relx=0.5, rely=0.5, anchor='center')
 
 #FUNÇÕES DE NOTIFICAÇÃO -------------------------------------------------
-def notificar(titulo, texto):
-    import subprocess
-    comando = """
-    [Windows.UI.Notifications.ToastNotificationManager, Windows.UI.Notifications, ContentType = WindowsRuntime] > $null;
-    $Template = [Windows.UI.Notifications.ToastNotificationManager]::GetTemplateContent([Windows.UI.Notifications.ToastTemplateType]::ToastText02);
-    $RawXml = [xml] $Template.GetXml()
-    ($RawXml.toast.visual.binding.text|where {$_.id -eq "1"}).AppendChild($RawXml.CreateTextNode('"""+titulo+"""')) > $null
-    ($RawXml.toast.visual.binding.text|where {$_.id -eq "2"}).AppendChild($RawXml.CreateTextNode('"""+texto+"""')) > $null;
-    $SerializedXml = New-Object Windows.Data.Xml.Dom.XmlDocument;
-    $SerializedXml.LoadXml($RawXml.OuterXml);
-    $Toast = [Windows.UI.Notifications.ToastNotification]::new($SerializedXml);
-    $Toast.Tag = "PowerShell";
-    $Toast.Group = "PowerShell";
-    $Toast.ExpirationTime = [DateTimeOffset]::Now.AddMinutes(5);
-    $Notifier = [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier("OTUS");
-    $Notifier.Show($Toast);
-    """
-    process=subprocess.Popen(["powershell","& {" + comando + "}"],stdout=subprocess.PIPE);
+
+    
+def notificar(titulo, texto, dia, index_tarefa):
+    try: 
+        import zroya
+        import os
+        from time import sleep
+
+        zroya.init(" ", "Otus", "Otus", "Otus", "1.0")
+
+        ask_template = zroya.Template(zroya.TemplateType.ImageAndText4)
+        ask_template.setFirstLine(titulo)
+        ask_template.setSecondLine(texto)
+        ask_template.addAction("Já estudei")
+
+        def onAction(nid, action_id):
+            marcar_tarefa_feita(dia, index_tarefa)
+         
+        zroya.show(ask_template, on_action=onAction)
+
+    except:
+        print('Erro ao importar zroya')
+        print('https://visualstudio.microsoft.com/visual-cpp-build-tools/')
+
 
 def notificar_lembretes_hoje():
     from datetime import date
@@ -173,18 +192,15 @@ def notificar_lembretes_hoje():
     hoje = date.today()
     #converte para formato dd/mm/aaaa
     hoje = hoje.strftime("%d/%m/%Y")
-    #inicia lembrete
-    lembrete = 'Lembre-se de:\n'
     #pega informações da data de hoje
     data_infos = informacoes_agenda()
     #verifica se data existe no json
     if (hoje in data_infos):
         data_infos = data_infos[hoje]
         #para cada atividade, adiciona ao lembrete final
-        for atividade in data_infos:
+        for idx, atividade in enumerate(data_infos):
             tecnologia = atividade['tecnologia']
             horas = atividade['horas']
-            lembrete += f"> estudar {tecnologia} por {horas} horas\n"
-        #notifica lembrete final
-        notificar("Lembrete",lembrete)
-
+            lembrete = f"> estudar {tecnologia} por {horas} horas\n"
+            #notifica lembrete final
+            notificar("Lembrete",lembrete, hoje, idx)
