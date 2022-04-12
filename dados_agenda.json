@@ -16,12 +16,12 @@
   "01/04/2022": [
     {
       "tecnologia": "sql",
-      "horas": 4,
+      "horas": 0,
       "feito": "N"
     },
     {
       "tecnologia": "c#",
-      "horas": 5,
+      "horas": 0,
       "feito": "N"
     }
   ]

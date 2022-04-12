@@ -5,7 +5,7 @@ Tema do projeto: Assistente Pessoal Virtual<br>
 
 <details>
 <summary><b>Tutorial para rodar o Projeto</b></summary>
-  
+
 1. Clone o projeto
 ```
 git clone https://github.com/fatec-bd1sem/Projeto-Integrador-Fatec.git
@@ -45,13 +45,13 @@ pip install ttkthemes
 ```
 pip install tkcalendar
 ```
-  
+
 ```
 pip install pygame
 ```
 
 
-4. Execute o arquivo principal.py na pasta Projeto-Integrador-Fatec 
+4. Execute o arquivo principal.py na pasta Projeto-Integrador-Fatec
 
 </details>
 
@@ -92,6 +92,7 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 
 ### Tecnologias Utilizadas
  - Python<br>
+ - pythonlibs: SpeechRecognition, pyttsx3, tkinter,</br>ttkthemes, tkcalendar, pygame, matplotlib</br>
  - Jira<br>
  - GitHub<br>
  - Figma<br>
