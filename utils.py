@@ -1,4 +1,11 @@
 #FUNÇÕES INTERFACE ----------------------------------------------------
+def comando_botao_ouvir():
+    from utils import ouvir, procurar_comando, tocar
+    tocar('start.mp3')
+    frase = ouvir()
+    comando_encontrado = procurar_comando(frase)
+    #os.system('cls')
+
 def perguntar(window, pergunta, respostas):
     from tkinter import ttk
     #Limpa tela
