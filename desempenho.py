@@ -36,4 +36,3 @@ def desempenho():
     ax1.set_title("Horas empregadas de estudo")
 
     plt.show()
-desempenho()
