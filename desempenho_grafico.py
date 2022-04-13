@@ -16,15 +16,10 @@ for dia in data:
         tecnologias.append(tarefa.get("tecnologia"))
         horas.append(tarefa.get("horas"))
 
-
-labels =  tecnologias
-sizes  =  horas
-
-
 fig1, ax1 = plt.subplots()
 print (fig1, ax1)
 
-ax1.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
+ax1.pie(horas, labels=tecnologias, autopct='%1.1f%%', shadow=True, startangle=90)
 
 ax1.axis('equal')
 ax1.set_title("horas empregadas de estudo")
