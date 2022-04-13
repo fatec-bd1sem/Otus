@@ -49,7 +49,10 @@ pip install tkcalendar
 ```
 pip install pygame
 ```
-
+ 
+```
+pip install matplotlib
+```
 
 4. Execute o arquivo principal.py na pasta Projeto-Integrador-Fatec
 
