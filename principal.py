@@ -93,7 +93,8 @@ class Tela:
                      font="Verdana 12")
         text2.place(x=292,y=20)
         
-        
+    
+    
 janelaRaiz = Tk()
 Tela(janelaRaiz)
 janelaRaiz.configure(background="#0F2027")
