@@ -206,8 +206,9 @@ def notificar_lembretes_hoje():
         data_infos = data_infos[hoje]
         #para cada atividade, adiciona ao lembrete final
         for idx, atividade in enumerate(data_infos):
-            tecnologia = atividade['tecnologia']
-            horas = atividade['horas']
-            lembrete = f"> estudar {tecnologia} por {horas} horas\n"
-            #notifica lembrete final
-            notificar("Lembrete",lembrete, hoje, idx)
+            if atividade['feito'] == 'N':
+                tecnologia = atividade['tecnologia']
+                horas = atividade['horas']
+                lembrete = f"> estudar {tecnologia} por {horas} horas\n"
+                #notifica lembrete final
+                notificar("Lembrete",lembrete, hoje, idx)
