@@ -53,7 +53,7 @@ def procurar_comando(frase):
     from desempenho import desempenho
     from quiz import quiz
 
-    comandos = ['agenda','desempenho','questionário']
+    comandos = ['agenda','desempenho','guia']
     funcoes = [agenda, desempenho, quiz]
 
     encontrado = False
