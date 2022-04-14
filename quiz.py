@@ -2,7 +2,6 @@ from tkinter import ttk
 from ttkthemes import ThemedTk
 from tkinter import *
 from utils import falar
-import pyttsx3
 import threading
 import speech_recognition as sr
 import timer
@@ -249,8 +248,9 @@ def BancoDADOSAud():
     falar("Recomendamos programação e estruturação em banco de dados My S Q L")
     falar("Aqui está o link que você poderá usar para começar seu conhecimento")
 
-threading.Thread(target=Inicial).start()
-
+def quiz():
+    threading.Thread(target=Inicial).start()
+    
 
 
 
