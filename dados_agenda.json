@@ -1,27 +1,106 @@
 {
-  "30/03/2022": [
+  "11/04/2022": [
     {
-      "tecnologia": "teste",
-      "horas": 6,
+      "tecnologia": "python",
+      "horas": 3,
       "feito": "S"
     }
   ],
-  "31/03/2022": [
+  "12/04/2022": [
+    {
+      "tecnologia": "Java",
+      "horas": 3,
+      "feito": "N"
+    }
+  ],
+  "13/04/2022": [
+    {
+      "tecnologia": "Kotlin",
+      "horas": 1,
+      "feito": "S"
+    }
+  ],
+  "14/04/2022": [
+    {
+      "tecnologia": "c++",
+      "horas": 1,
+      "feito": "S"
+    }
+  ],
+  "15/04/2022": [
     {
       "tecnologia": "python",
       "horas": 2,
-      "feito": "S"
+      "feito": "N"
     }
   ],
-  "01/04/2022": [
-    {
-      "tecnologia": "sql",
-      "horas": 0,
-      "feito": "N"
-    },
+  "18/04/2022": [
     {
       "tecnologia": "c#",
-      "horas": 0,
+      "horas": 2,
+      "feito": "N"
+    }
+  ],
+  "19/04/2022": [
+    {
+      "tecnologia": "python",
+      "horas": 2,
+      "feito": "N"
+    }
+  ],
+  "20/04/2022": [
+    {
+      "tecnologia": "python",
+      "horas": 2,
+      "feito": "N"
+    }
+  ],
+  "21/04/2022": [
+    {
+      "tecnologia": "python",
+      "horas": 2,
+      "feito": "N"
+    }
+  ],
+  "22/04/2022": [
+    {
+      "tecnologia": "python",
+      "horas": 2,
+      "feito": "N"
+    }
+  ],
+  "25/04/2022": [
+    {
+      "tecnologia": "python",
+      "horas": 2,
+      "feito": "N"
+    }
+  ],
+  "26/04/2022": [
+    {
+      "tecnologia": "Kotlin",
+      "horas": 2,
+      "feito": "N"
+    }
+  ],
+  "27/04/2022": [
+    {
+      "tecnologia": "c++",
+      "horas": 2,
+      "feito": "N"
+    }
+  ],
+  "28/04/2022": [
+    {
+      "tecnologia": "python",
+      "horas": 2,
+      "feito": "N"
+    }
+  ],
+  "29/04/2022": [
+    {
+      "tecnologia": "c#",
+      "horas": 2,
       "feito": "N"
     }
   ]
