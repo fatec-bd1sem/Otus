@@ -173,8 +173,6 @@ def agendar_tarefa(janela, pergunta):
 def notificar(titulo, texto, dia, index_tarefa):
     try: 
         import zroya
-        import os
-        from time import sleep
 
         zroya.init(" ", "Otus", "Otus", "Otus", "1.0")
 
