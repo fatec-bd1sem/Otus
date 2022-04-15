@@ -1,33 +1,68 @@
-from tkinter import *
-from tkcalendar import Calendar
+from utils import enviar_tarefa
+
+
 def agenda():
-    print('abrindo agenda...')
+    from tkinter import Tk
+    from utils import agendar_tarefa
+    from datetime import datetime
+    import threading
+    
+    #Armazenando dia
+    def coletar_dia():
+        from utils import ouvir
+        dia = int(ouvir())
+        if dia != None:
+            janela = Tk()
+            janela.geometry("300x200")
+            janela.configure(background="#0F2027")
+            janela.title("Assistente Virtual OTUS")
+            agendar_tarefa(janela,"Qual tarefa deseja estudar?")
+            threading.Thread(target=coletar_tarefa).start()
+            janela.mainloop()
+        return dia
+    
+    #Armazenando tarefa
+    def coletar_tarefa():
+        from utils import ouvir
+        tarefa = str(ouvir())
+        if tarefa != None:
+            janela = Tk()
+            janela.geometry("300x200")
+            janela.configure(background="#0F2027")
+            janela.title("Assistente Virtual OTUS")
+            agendar_tarefa(janela,"Quanto tempo deseja estudar?")
+            threading.Thread(target=coletar_tempo).start()
+            janela.mainloop()
+        return tarefa
+    
+    #Armazenando tempo
+    def coletar_tempo():
+        from utils import ouvir
+        tempo = float(ouvir())
+        return tempo
 
-    #create the gui object
-    tk = Tk()
+    #Pegando data atual
+    mes = str(datetime.today().strftime('%m'))
+    ano = str(datetime.today().strftime('%Y'))
+    #Pegando do arquivo agenda
+    dia = coletar_dia()
+    data = str(f"{dia}/{mes}/{ano}")
+    tarefa = coletar_tarefa()
+    tempo = coletar_tempo()
 
-    #geometry of the GUI Interface
-    tk.geometry("400x400")
+    enviar_tarefa(data, tarefa, tempo)
 
-    #add the Calendar module
-    cal = Calendar(tk, selectmode='day',
-                   year=2022, month=1,
-                   day=11)
+    #Tema interface
+    janela = Tk(theme="arc")
 
-    cal.pack(pady=20, fill="both", expand=True)
+    #Tamanho interface
+    janela.geometry('300x200')
+    janela.configure(background="#0F2027")
+    janela.title("Assistente Virtual OTUS") 
 
+    #Pergunta dia 
+    agendar_tarefa(janela,"Qual dia deseja estudar?")
+    threading.Thread(target=coletar_dia).start()
+    janela.mainloop()
 
-    #function to grab the selected date
-    def grad_date():
-        date.config(text="Selected Date is: " + cal.get_date())
-
-
-    #adding button and label
-    Button(tk, text="Get Date",
-           command=grad_date).pack(pady=20)
-
-    date = Label(tk, text="")
-    date.pack(pady=20)
-
-    #Execute Tkinter
-    tk.mainloop()
+agenda()

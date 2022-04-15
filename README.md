@@ -5,7 +5,7 @@ Tema do projeto: Assistente Pessoal Virtual<br>
 
 <details>
 <summary><b>Tutorial para rodar o Projeto</b></summary>
-  
+
 1. Clone o projeto
 ```
 git clone https://github.com/fatec-bd1sem/Projeto-Integrador-Fatec.git
@@ -39,11 +39,22 @@ pip install tk
 ```
 
 ```
+pip install ttkthemes
+```
+
+```
 pip install tkcalendar
 ```
 
+```
+pip install pygame
+```
+ 
+```
+pip install matplotlib
+```
 
-4. Execute o arquivo principal.py na pasta Projeto-Integrador-Fatec 
+4. Execute o arquivo principal.py na pasta Projeto-Integrador-Fatec
 
 </details>
 
@@ -57,6 +68,25 @@ pip install tkcalendar
 >Visão do Projeto<br>
 O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, tendo como público alvo alunos de programação que buscam inovar seus métodos de estudo e organizar seus horários.
 
+## Backlog do Projeto
+
+ - Comando de voz
+ - Agenda
+ - Guia de estudo
+ - Desempenho de estudos
+ - Auxiliar de linguagem
+ - Calculadora lógica
+ - Dicas de boas práticas de programação
+ - Busca por artigos
+ <hr>
+
+## Cronograma
+- [x] 25/03 á 14/04 - 1º sprint
+- [ ] 25/04 á 15/05 - 2º sprint
+- [ ] 16/05 á 27/05 - 3º sprint
+- [ ] 15/06 - Feira de soluções
+<hr>
+
 ## Funcionalidades a serem desenvolvidas na primeira sprint:
  - [ ] Agenda<br>
  - [ ] Quiz interativo sobre linguagens de programação<br>
@@ -65,17 +95,18 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 
 ### Tecnologias Utilizadas
  - Python<br>
+ - pythonlibs: SpeechRecognition, pyttsx3, tkinter,</br>ttkthemes, tkcalendar, pygame, matplotlib</br>
  - Jira<br>
  - GitHub<br>
  - Figma<br>
 
  ### Contribuição
  - [Beatrice Lopes](https://github.com/beatricelopes)<br>
- - [Breno](https://github.com/Breno30)<br>
+ - [Breno do Nascimento](https://github.com/Breno30)<br>
  - [Carlos Torres](https://github.com/CarlosTorres2305)<br>
  - [Davi Gusmão](https://github.com/Davign10)<br>
- - [Gabriel](https://github.com/DevBielgrazi)<br>
- - [Guilherme](https://github.com/1SGuilherme)<br>
+ - [Gabriel Vieira](https://github.com/DevBielgrazi)<br>
+ - [Guilherme Santana](https://github.com/1SGuilherme)<br>
  - [Wallace Honorato](https://github.com/WallaceHS20)<br>
 
 <br>
