@@ -92,7 +92,7 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 <hr>
 
 ## Funcionalidades a serem desenvolvidas na primeira sprint:
- - [ ] Agenda<br>
+ - [x] Agenda<br>
  - [ ] Quiz interativo sobre linguagens de programação<br>
  - [x] Amostragem do desempenho de estudo<br>
  - [x] Esboço de interface<br>
