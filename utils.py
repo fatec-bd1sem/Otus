@@ -129,20 +129,12 @@ def informacoes_agenda():
     return dados_agenda
 
 #Passar informações para json
-def enviar_tarefa():
-    from agenda import coletar_dia,coletar_tarefa,coletar_tempo
+def enviar_tarefa(data, tarefa, tempo):
     import json
     import shutil
     import tempfile
-    from datetime import datetime
-    #Pegando data atual
-    mes = str(datetime.today().strftime('%m'))
-    ano = str(datetime.today().strftime('%Y'))
-    #Pegando do arquivo agenda
-    dia = coletar_dia()
-    data = str(f"{dia}/{mes}/{ano}")
-    tarefa = coletar_tarefa()
-    tempo = coletar_tempo()
+
+
     #Pegando arquivo json antigo
     with open("dados_agenda.json", "r", encoding='utf-8') as file, \
         tempfile.NamedTemporaryFile('w', delete=False) as out:

@@ -1,7 +1,22 @@
+from utils import enviar_tarefa
+
+
 def agenda():
     from ttkthemes import ThemedTk
     from utils import agendar_tarefa
+    from datetime import datetime
     import threading
+
+    #Pegando data atual
+    mes = str(datetime.today().strftime('%m'))
+    ano = str(datetime.today().strftime('%Y'))
+    #Pegando do arquivo agenda
+    dia = coletar_dia()
+    data = str(f"{dia}/{mes}/{ano}")
+    tarefa = coletar_tarefa()
+    tempo = coletar_tempo()
+
+    enviar_tarefa(data, tarefa, tempo)
     
     #Armazenando dia
     def coletar_dia():
