@@ -61,4 +61,8 @@ def agenda():
     tarefa = coletar_tarefa()
     tempo = coletar_tempo()
 
+<<<<<<< HEAD
     enviar_tarefa(data, tarefa, tempo)
+=======
+    enviar_tarefa(data, tarefa, tempo)
+>>>>>>> 0267ef69262574c216e1b7632488974ef13d900b
