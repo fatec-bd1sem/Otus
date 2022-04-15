@@ -60,9 +60,4 @@ def agenda():
     data = str(f"{dia}/{mes}/{ano}")
     tarefa = coletar_tarefa()
     tempo = coletar_tempo()
-
-<<<<<<< HEAD
     enviar_tarefa(data, tarefa, tempo)
-=======
-    enviar_tarefa(data, tarefa, tempo)
->>>>>>> 0267ef69262574c216e1b7632488974ef13d900b
