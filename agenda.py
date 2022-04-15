@@ -8,16 +8,19 @@ def agenda():
     #Armazenando dia
     def coletar_dia():
         from utils import ouvir
-        dia = int(ouvir())
-        if dia != None:
-            janela = Tk()
-            janela.geometry("300x200")
-            janela.configure(background="#0F2027")
-            janela.title("Assistente Virtual OTUS")
-            agendar_tarefa(janela,"Qual tarefa deseja estudar?")
-            threading.Thread(target=coletar_tarefa).start()
-            janela.mainloop()
-        return dia
+        try:
+            dia = int(ouvir())
+            if dia != None:
+                janela = Tk()
+                janela.geometry("300x200")
+                janela.configure(background="#0F2027")
+                janela.title("Assistente Virtual OTUS")
+                agendar_tarefa(janela,"Qual tarefa deseja estudar?")
+                threading.Thread(target=coletar_tarefa).start()
+                janela.mainloop()
+            return dia
+        except:
+            return coletar_dia()
     
     #Armazenando tarefa
     def coletar_tarefa():
@@ -36,9 +39,12 @@ def agenda():
     #Armazenando tempo
     def coletar_tempo():
         from utils import ouvir
-        tempo = float(ouvir())
-        return tempo
-
+        try:
+            tempo = float(ouvir())
+            return tempo
+        except:
+            return coletar_tempo()
+        
     #Tema interface
     janela = Tk()
 
