@@ -54,6 +54,10 @@ pip install pygame
 pip install matplotlib
 ```
 
+```
+pip install Pillow
+```
+
 4. Execute o arquivo principal.py na pasta Projeto-Integrador-Fatec
 
 </details>
@@ -90,12 +94,12 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 ## Funcionalidades a serem desenvolvidas na primeira sprint:
  - [ ] Agenda<br>
  - [ ] Quiz interativo sobre linguagens de programação<br>
- - [ ] Amostragem do desempenho de estudo<br>
- - [ ] Esboço de interface<br>
+ - [x] Amostragem do desempenho de estudo<br>
+ - [x] Esboço de interface<br>
 
 ### Tecnologias Utilizadas
  - Python<br>
- - pythonlibs: SpeechRecognition, pyttsx3, tkinter,</br>ttkthemes, tkcalendar, pygame, matplotlib</br>
+ - pythonlibs: SpeechRecognition, pyttsx3, tkinter, Pillow</br>ttkthemes, tkcalendar, pygame, matplotlib</br>
  - Jira<br>
  - GitHub<br>
  - Figma<br>

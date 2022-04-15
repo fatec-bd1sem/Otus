@@ -150,13 +150,13 @@ def enviar_tarefa(data, tarefa, tempo):
 
 #Janela de pergunta    
 def agendar_tarefa(janela, pergunta):
-    from tkinter import ttk
+    from tkinter import Label
     #Limpa tela
     for componente in janela.winfo_children():
         componente.destroy()
         
     #Formatacao e fonte pergunta
-    label_pergunta = ttk.Label(janela, text=pergunta,font = ('Helvetica', 15, 'bold'))
+    label_pergunta = Label(janela, text=pergunta,font = ('Helvetica', 15, 'bold'),background="#0F2027",foreground="#FFFFFF")
     label_pergunta.place(relx=0.5, rely=0.5, anchor='center')
 
 #FUNÇÕES DE NOTIFICAÇÃO -------------------------------------------------
