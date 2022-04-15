@@ -81,7 +81,7 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  <hr>
 
 ## Cronograma
-- [ ] 25/03 á 14/04 - 1º sprint
+- [x] 25/03 á 14/04 - 1º sprint
 - [ ] 25/04 á 15/05 - 2º sprint
 - [ ] 16/05 á 27/05 - 3º sprint
 - [ ] 15/06 - Feira de soluções
