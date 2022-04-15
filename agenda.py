@@ -1,7 +1,5 @@
-from utils import enviar_tarefa
-
-
 def agenda():
+    from utils import enviar_tarefa
     from tkinter import Tk
     from utils import agendar_tarefa
     from datetime import datetime
@@ -41,19 +39,8 @@ def agenda():
         tempo = float(ouvir())
         return tempo
 
-    #Pegando data atual
-    mes = str(datetime.today().strftime('%m'))
-    ano = str(datetime.today().strftime('%Y'))
-    #Pegando do arquivo agenda
-    dia = coletar_dia()
-    data = str(f"{dia}/{mes}/{ano}")
-    tarefa = coletar_tarefa()
-    tempo = coletar_tempo()
-
-    enviar_tarefa(data, tarefa, tempo)
-
     #Tema interface
-    janela = Tk(theme="arc")
+    janela = Tk()
 
     #Tamanho interface
     janela.geometry('300x200')
@@ -65,4 +52,13 @@ def agenda():
     threading.Thread(target=coletar_dia).start()
     janela.mainloop()
 
-agenda()
+    #Pegando data atual
+    mes = str(datetime.today().strftime('%m'))
+    ano = str(datetime.today().strftime('%Y'))
+    #Pegando do arquivo agenda
+    dia = coletar_dia()
+    data = str(f"{dia}/{mes}/{ano}")
+    tarefa = coletar_tarefa()
+    tempo = coletar_tempo()
+
+    enviar_tarefa(data, tarefa, tempo)
