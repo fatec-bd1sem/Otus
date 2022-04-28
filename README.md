@@ -74,14 +74,14 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 
 ## Backlog do Projeto
 
- 1ª Comando de voz
- 1ª Agenda
- 1ª Desempenho de estudos
- 1ª Guia de estudo
- 2ª Busca por artigos
- 2º Auxiliar de linguagem
- 2º Dicas de boas práticas de programação
- 3º Calculadora lógica
+ - Comando de voz
+ - Agenda
+ - Desempenho de estudos
+ - Guia de estudo
+ - Busca por artigos
+ - Auxiliar de linguagem
+ - Dicas de boas práticas de programação
+ - Calculadora lógica
  <hr>
 
 ## Cronograma
