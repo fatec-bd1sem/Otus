@@ -34,9 +34,8 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 
 ## Funcionalidades a serem desenvolvidas na primeira sprint:
  - [x] Agenda<br>
- - [ ] Quiz interativo sobre linguagens de programação<br>
- - [x] Amostragem do desempenho de estudo<br>
- - [x] Esboço de interface<br>
+ - [x] Desempenho de estudo<br>
+ - [x] Mockup de interface<br>
 
 ### Tecnologias Utilizadas
  - Python<br>
