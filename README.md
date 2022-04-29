@@ -16,11 +16,12 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 ## Backlog do Produto
 
  - Comando de voz
+ - Interface
  - Agenda
  - Desempenho de estudos
  - Guia de estudo
  - Busca por artigos
- - Auxiliar de linguagem
+ - Auxiliar de linguagem 
  - Dicas de boas práticas de programação
  - Calculadora lógica
  <hr>
@@ -39,11 +40,20 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 
 ### Tecnologias Utilizadas
  - Python<br>
- - pythonlibs: SpeechRecognition, pyttsx3, tkinter, Pillow</br>ttkthemes, tkcalendar, pygame, matplotlib</br>
  - Jira<br>
  - GitHub<br>
  - Figma<br>
 
+### Bicliotecas Utilizadas
+ - SpeechRecognition 
+ - pyttsx3
+ - tkinter
+ - Pillow
+ - ttkthemes
+ - tkcalendar
+ - pygame
+ - matplotlib
+ 
  ### Equipe
  - [Beatrice Lopes](https://github.com/beatricelopes)<br>
  - [Breno do Nascimento](https://github.com/Breno30)<br>
