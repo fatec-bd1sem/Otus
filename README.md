@@ -3,8 +3,62 @@ Declaração de visão do Projeto<br>
 Tema do projeto: Assistente Pessoal Virtual<br>
 <br>
 
+## Atribuições:
+ - Responder a comandos de voz ou sons específicos<br>
+ - Possuir no mínimo oito ações de naturezas distintas<br>
+ - Aplicação desktop<br>
+ - Responder aos comandos em som, texto ou ação<br>
+<br>
+
+>Visão do Projeto<br>
+O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, tendo como público alvo alunos de programação que buscam inovar seus métodos de estudo e organizar seus horários.
+
+## Backlog do Produto
+
+ - Comando de voz
+ - Agenda
+ - Desempenho de estudos
+ - Guia de estudo
+ - Busca por artigos
+ - Auxiliar de linguagem
+ - Dicas de boas práticas de programação
+ - Calculadora lógica
+ <hr>
+
+## Cronograma
+- [x] 25/03 á 14/04 - 1º sprint
+- [ ] 25/04 á 15/05 - 2º sprint
+- [ ] 16/05 á 27/05 - 3º sprint
+- [ ] 15/06 - Feira de soluções
+<hr>
+
+## Funcionalidades a serem desenvolvidas na primeira sprint:
+ - [x] Agenda<br>
+ - [ ] Quiz interativo sobre linguagens de programação<br>
+ - [x] Amostragem do desempenho de estudo<br>
+ - [x] Esboço de interface<br>
+
+### Tecnologias Utilizadas
+ - Python<br>
+ - pythonlibs: SpeechRecognition, pyttsx3, tkinter, Pillow</br>ttkthemes, tkcalendar, pygame, matplotlib</br>
+ - Jira<br>
+ - GitHub<br>
+ - Figma<br>
+
+ ### Equipe
+ - [Beatrice Lopes](https://github.com/beatricelopes)<br>
+ - [Breno do Nascimento](https://github.com/Breno30)<br>
+ - [Carlos Torres](https://github.com/CarlosTorres2305)<br>
+ - [Davi Gusmão](https://github.com/Davign10)<br>
+ - [Gabriel Vieira](https://github.com/DevBielgrazi)<br>
+ - [Guilherme Santana](https://github.com/1SGuilherme)<br>
+ - [Wallace Honorato](https://github.com/WallaceHS20)<br>
+
+<br>
+
+### Tutorial para rodar o Projeto
 <details>
-<summary><b>Tutorial para rodar o Projeto</b></summary>
+<summary>passo a passo</summary>
 
 1. Clone o projeto
 ```
@@ -61,56 +115,3 @@ pip install Pillow
 4. Execute o arquivo principal.py na pasta Projeto-Integrador-Fatec
 
 </details>
-
-## Atribuições:
- - Responder a comandos de voz ou sons específicos<br>
- - Possuir no mínimo oito ações de naturezas distintas<br>
- - Aplicação desktop<br>
- - Responder aos comandos em som, texto ou ação<br>
-<br>
-
->Visão do Projeto<br>
-O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, tendo como público alvo alunos de programação que buscam inovar seus métodos de estudo e organizar seus horários.
-
-## Backlog do Projeto
-
- - Comando de voz
- - Agenda
- - Desempenho de estudos
- - Guia de estudo
- - Busca por artigos
- - Auxiliar de linguagem
- - Dicas de boas práticas de programação
- - Calculadora lógica
- <hr>
-
-## Cronograma
-- [x] 25/03 á 14/04 - 1º sprint
-- [ ] 25/04 á 15/05 - 2º sprint
-- [ ] 16/05 á 27/05 - 3º sprint
-- [ ] 15/06 - Feira de soluções
-<hr>
-
-## Funcionalidades a serem desenvolvidas na primeira sprint:
- - [x] Agenda<br>
- - [ ] Quiz interativo sobre linguagens de programação<br>
- - [x] Amostragem do desempenho de estudo<br>
- - [x] Esboço de interface<br>
-
-### Tecnologias Utilizadas
- - Python<br>
- - pythonlibs: SpeechRecognition, pyttsx3, tkinter, Pillow</br>ttkthemes, tkcalendar, pygame, matplotlib</br>
- - Jira<br>
- - GitHub<br>
- - Figma<br>
-
- ### Contribuição
- - [Beatrice Lopes](https://github.com/beatricelopes)<br>
- - [Breno do Nascimento](https://github.com/Breno30)<br>
- - [Carlos Torres](https://github.com/CarlosTorres2305)<br>
- - [Davi Gusmão](https://github.com/Davign10)<br>
- - [Gabriel Vieira](https://github.com/DevBielgrazi)<br>
- - [Guilherme Santana](https://github.com/1SGuilherme)<br>
- - [Wallace Honorato](https://github.com/WallaceHS20)<br>
-
-<br>
