@@ -1,4 +1,4 @@
-def agenda():
+def agenda(tempo):
     from utils import enviar_tarefa
     from tkinter import Tk
     from utils import agendar_tarefa
@@ -41,29 +41,31 @@ def agenda():
         from utils import ouvir
         try:
             tempo = float(ouvir())
+            agenda(tempo)
             return tempo
         except:
             return coletar_tempo()
-        
-    #Tema interface
-    janela = Tk()
 
-    #Tamanho interface
-    janela.geometry('300x200')
-    janela.configure(background="#0F2027")
-    janela.title("Assistente Virtual OTUS") 
-
-    #Pergunta dia 
-    agendar_tarefa(janela,"Qual dia deseja estudar?")
-    threading.Thread(target=coletar_dia).start()
-    janela.mainloop()
-
-    #Pegando data atual
-    mes = str(datetime.today().strftime('%m'))
-    ano = str(datetime.today().strftime('%Y'))
-    #Pegando do arquivo agenda
-    dia = coletar_dia()
-    data = str(f"{dia}/{mes}/{ano}")
-    tarefa = coletar_tarefa()
-    tempo = coletar_tempo()
-    enviar_tarefa(data, tarefa, tempo)
+    def iniciar_pergunta():        
+        #Tema interface
+        janela = Tk()
+        #Tamanho interface
+        janela.geometry('300x200')
+        janela.configure(background="#0F2027")
+        janela.title("Assistente Virtual OTUS") 
+        #Pergunta dia 
+        agendar_tarefa(janela,"Qual dia deseja estudar?")
+        threading.Thread(target=coletar_dia).start()
+        janela.mainloop()
+    
+    threading.Thread(target=iniciar_pergunta).start()
+    if tempo != "":
+        #Pegando data atual
+        mes = str(datetime.today().strftime('%m'))
+        ano = str(datetime.today().strftime('%Y'))
+        #Pegando do arquivo agenda
+        dia = coletar_dia()
+        data = str(f"{dia}/{mes}/{ano}")
+        tarefa = coletar_tarefa()
+        tempo = coletar_tempo()
+        enviar_tarefa(data, tarefa, tempo)
