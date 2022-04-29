@@ -1,7 +1,19 @@
-<h1>Projeto Integrado: API</h1>
+<h1>Aprendizagem por Projetos Integrados: API</h1>
 Declaração de visão do Projeto<br>
 Tema do projeto: Assistente Pessoal Virtual<br>
 <br>
+O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, tendo como público alvo alunos de programação que buscam inovar seus métodos de estudo e organizar seus horários.
+
+
+ ### Equipe
+ - [Beatrice Lopes](https://github.com/beatricelopes)<br>
+ - [Breno do Nascimento](https://github.com/Breno30)<br>
+ - [Carlos Torres](https://github.com/CarlosTorres2305)<br>
+ - [Davi Gusmão](https://github.com/Davign10)<br>
+ - [Gabriel Vieira](https://github.com/DevBielgrazi)<br>
+ - [Guilherme Santana](https://github.com/1SGuilherme)<br>
+ - [Wallace Honorato](https://github.com/WallaceHS20)<br>
+
 
 ## Requisitos:
  - Responder a comandos de voz ou sons específicos<br>
@@ -10,8 +22,7 @@ Tema do projeto: Assistente Pessoal Virtual<br>
  - Responder aos comandos em som, texto ou ação<br>
 <br>
 
->Visão do Projeto<br>
-O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, tendo como público alvo alunos de programação que buscam inovar seus métodos de estudo e organizar seus horários.
+
 
 ## Backlog do Produto
 
@@ -44,7 +55,7 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  - GitHub<br>
  - Figma<br>
 
-### Bicliotecas Utilizadas
+### Bibliotecas Utilizadas
  - SpeechRecognition 
  - pyttsx3
  - tkinter
@@ -54,15 +65,6 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  - pygame
  - matplotlib
  
- ### Equipe
- - [Beatrice Lopes](https://github.com/beatricelopes)<br>
- - [Breno do Nascimento](https://github.com/Breno30)<br>
- - [Carlos Torres](https://github.com/CarlosTorres2305)<br>
- - [Davi Gusmão](https://github.com/Davign10)<br>
- - [Gabriel Vieira](https://github.com/DevBielgrazi)<br>
- - [Guilherme Santana](https://github.com/1SGuilherme)<br>
- - [Wallace Honorato](https://github.com/WallaceHS20)<br>
-
 <br>
 
 ### Tutorial para rodar o Projeto
