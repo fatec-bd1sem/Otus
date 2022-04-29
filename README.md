@@ -3,7 +3,7 @@ Declaração de visão do Projeto<br>
 Tema do projeto: Assistente Pessoal Virtual<br>
 <br>
 
-## Atribuições:
+## Requisitos:
  - Responder a comandos de voz ou sons específicos<br>
  - Possuir no mínimo oito ações de naturezas distintas<br>
  - Aplicação desktop<br>
@@ -26,10 +26,10 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  <hr>
 
 ## Cronograma
-- [x] 25/03 á 14/04 - 1º sprint
-- [ ] 25/04 á 15/05 - 2º sprint
-- [ ] 16/05 á 27/05 - 3º sprint
-- [ ] 15/06 - Feira de soluções
+- [x] 1º sprint - 25/03 á 14/04 
+- [ ] 2º sprint - 25/04 á 15/05
+- [ ] 3º sprint - 16/05 á 27/05 
+- [ ] Feira de soluções - 15/06 
 <hr>
 
 ## Funcionalidades a serem desenvolvidas na primeira sprint:
