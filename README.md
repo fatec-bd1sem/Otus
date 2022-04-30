@@ -73,7 +73,7 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 
 1. Clone o projeto
 ```
-git clone https://github.com/fatec-bd1sem/Projeto-Integrador-Fatec.git
+git clone https://github.com/fatec-bd1sem/Otus.git
 ```
 
 2. Baixe o PyAudio para sua versão do python [nesse link](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio)
