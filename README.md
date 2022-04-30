@@ -123,6 +123,6 @@ pip install matplotlib
 pip install Pillow
 ```
 
-4. Execute o arquivo principal.py na pasta Projeto-Integrador-Fatec
+4. Execute o arquivo principal.py na pasta `Otus`
 
 </details>
