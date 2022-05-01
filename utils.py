@@ -149,15 +149,25 @@ def enviar_tarefa(data, tarefa, tempo):
     shutil.move(out.name, 'dados_agenda.json')
 
 #Janela de pergunta    
-def agendar_tarefa(janela, pergunta):
-    from tkinter import Label
+def agendar_tarefa(pergunta):
+    from tkinter import Label, Tk
+    
+    #Tema interface
+    janela = Tk()
+    #Tamanho interface
+    janela.geometry('300x200')
+    janela.configure(background="#0F2027")
+    janela.title("Assistente Virtual OTUS")
+    
     #Limpa tela
     for componente in janela.winfo_children():
         componente.destroy()
-        
+
     #Formatacao e fonte pergunta
     label_pergunta = Label(janela, text=pergunta,font = ('Helvetica', 15, 'bold'),background="#0F2027",foreground="#FFFFFF")
     label_pergunta.place(relx=0.5, rely=0.5, anchor='center')
+
+    janela.mainloop()
 
 #FUNÇÕES DE NOTIFICAÇÃO -------------------------------------------------
 
