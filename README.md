@@ -1,8 +1,15 @@
-<h1>Aprendizagem por Projetos Integrados: API</h1>
-Declaração de visão do Projeto<br>
-Tema do projeto: Assistente Pessoal Virtual<br>
+
+
+
+<h1 align="center">OTUS</h1>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/36649454/167738690-ab4cf4cd-1bb7-4e08-b1cf-78c8dbb7a848.png" width=450px>
+
 <br>
+<p align="left">
 O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, tendo como público alvo alunos de programação que buscam inovar seus métodos de estudo e organizar seus horários.
+
 
 
  ### Equipe
@@ -44,10 +51,15 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 - [ ] Feira de soluções - 15/06 
 <hr>
 
-## Funcionalidades a serem desenvolvidas na primeira sprint:
- - [x] Agenda<br>
- - [x] Desempenho de estudo<br>
- - [x] Mockup de interface<br>
+## Sprint 1:
+ - Agenda<br>
+ - Desempenho de estudo<br>
+ - Mockup de interface<br>
+
+## Sprint 2:
+ - Guia de estudos 
+ - Busca por artigos
+ - Auxiliar de linguagem
 
 ### Tecnologias Utilizadas
  - Python<br>
