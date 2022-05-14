@@ -1,0 +1,50 @@
+{
+    "condicoes": 
+        {
+            "php": "if($v = 1){\n}elseif{\n}else{\n}",
+            "javascript": "if($v = 1){\n}elseif{\n}else{\n}",
+            "python": "if(a = 1):\n   #tabulacao\nelif(a = 2):\n  #tabulacao\nelse:\n   #tabulacao",
+            "java":  "if($v = 1){\n}elseif{\n}else{\n}",
+            "c++":  "if($v = 1){\n}elseif{\n}else{\n}"
+        },
+    "lacos de repeticao": 
+        {
+            "php": "n = 1;\n\nwhile (n <= 10) {\n   #tabulacao\n}\n\nfor (n = 1; n <= 10; n++) {\n  #tabulacao ;\n}",
+            "javascript":  "n = 1;\n\nwhile (n <= 10) {\n   #tabulacao\n}\n\nfor (n = 1; n <= 10; n++) {\n  #tabulacao ;\n}",
+            "python":  "contador = 0\nwhile (contador < 5):\n   //instrucoes\n  contador   = contador + 1\n\nfor variavel in lista\n    comandos",
+            "java":  "n = 1;\n\nwhile (n <= 10) {\n   #tabulacao\n}\n\nfor (n = 1; n <= 10; n++) {\n  #tabulacao ;\n}",
+            "c++":  "n = 1;\n\nwhile (n <= 10) {\n   #tabulacao\n}\n\nfor (n = 1; n <= 10; n++) {\n  #tabulacao ;\n}"
+        },
+    "variaveis": 
+        {
+            "php": "$nome = '   ';",
+            "javascript":  "var nome = '  ';",
+            "python":  "nome = '  '",
+            "java":  "nome = 1   1; ",
+            "c++":  "string_nome = '  ';"
+        },
+    "biblioteca":
+        {
+            "php": "include( '       ');\nrequire('         ');",
+            "javascript":  "import",
+            "python":  "import",
+            "java":  "import",
+            "c++": "include <>"
+        },
+    "funcoes":
+        {
+        "php": "function nome_funcao($par1, $par2, $par3...$parn)\n{\n  //instrucoes\n}",
+        "javascript":  "function nome_funcao (          ) {\n  //instrucoes\n}",
+        "python":  "def nome_funcao(         ):\n  //instrucoes",
+        "java":  "public static <nome_funcao> (     )\n{\n}",
+        "c++":  "int main()\n{\n    int i = sum(10, 32);\n  int j = sum(i, 66);\n}"
+        },
+    "classes":
+        {
+        "php": "get_class(        )",
+        "javascript":  "console.log (        )",
+        "python":  "type (       )",
+        "java":  "<modificador de acesso> class NomeDaClasse {\n    // Local onde atributos, construtores e métodos são criados\n}",
+        "c++":  "lass Dado{\n   private: //default\nint face;\npublic:\n    Dado(){srand(time(0));rolar();};\n  const static int FACES=6;\n int obterFace();\nvoid rolar();\n};"
+        }
+}
