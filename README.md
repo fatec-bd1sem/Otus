@@ -1,6 +1,3 @@
-
-
-
 <h1 align="center">OTUS</h1>
 
 <p align="center">
@@ -12,20 +9,9 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 
 
 
- ### Equipe
- - [Beatrice Lopes](https://github.com/beatricelopes)<br>
- - [Breno do Nascimento](https://github.com/Breno30)<br>
- - [Carlos Torres](https://github.com/CarlosTorres2305)<br>
- - [Davi Gusmão](https://github.com/Davign10)<br>
- - [Gabriel Vieira](https://github.com/DevBielgrazi)<br>
- - [Guilherme Santana](https://github.com/1SGuilherme)<br>
- - [Wallace Honorato](https://github.com/WallaceHS20)<br>
-
-
 ## Requisitos:
  - Responder a comandos de voz ou sons específicos<br>
  - Possuir no mínimo oito ações de naturezas distintas<br>
- - Aplicação desktop<br>
  - Responder aos comandos em som, texto ou ação<br>
 <br>
 
@@ -40,26 +26,39 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  - Guia de estudo (Imprescindível)
  - Busca por artigos (Imprescindível)
  - Auxiliar de linguagem (Desejável)
- - Dicas de boas práticas de programação (Imprescindível)
+ - Dicas e boas práticas de programação (Imprescindível)
  - Calculadora lógica (Imprescindível)
+ - Music Player 
  <hr>
 
 ## Cronograma
-- [x] 1º sprint - 25/03 á 14/04 
-- [ ] 2º sprint - 25/04 á 15/05
-- [ ] 3º sprint - 16/05 á 27/05 
-- [ ] Feira de soluções - 15/06 
-<hr>
-
-## Sprint 1:
+<details>
+ <summary>1º sprint - 25/03 á 14/04</summary>
  - Agenda<br>
+ <br>
  - Desempenho de estudo<br>
- - Mockup de interface<br>
+ <br>
+ - <b>Mockup de interface</b><br>
+ <img src="https://user-images.githubusercontent.com/36649454/168403057-93a92485-1d42-47ca-b38b-170c97ce6f61.png" width=400px>
+<br>
+<br>
+ <img src="https://user-images.githubusercontent.com/36649454/168403301-18119c76-ad47-4922-b764-9768e9f49f7d.png" width=400px>
+</details>
 
-## Sprint 2:
- - Guia de estudos 
- - Busca por artigos
- - Auxiliar de linguagem
+
+<details>
+ <summary>2º sprint - 25/04 á 15/05</summary>
+ - Guia de estudos<br>
+ <br>
+ - Busca por artigos<br>
+ <br>
+ - Auxiliar de linguagem<br>
+ </details>
+ <details>
+ <summary>3º sprint - 16/05 á 27/05</summary>
+ </details>
+- Feira de soluções - 15/06 
+<hr>
 
 ### Tecnologias Utilizadas
  - Python<br>
@@ -77,6 +76,16 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  - pygame
  - matplotlib
  
+<br>
+
+ ### Equipe
+ - [Beatrice Lopes](https://github.com/beatricelopes)<br>
+ - [Breno do Nascimento](https://github.com/Breno30)<br>
+ - [Carlos Torres](https://github.com/CarlosTorres2305)<br>
+ - [Davi Gusmão](https://github.com/Davign10)<br>
+ - [Gabriel Vieira](https://github.com/DevBielgrazi)<br>
+ - [Guilherme Santana](https://github.com/1SGuilherme)<br>
+ - [Wallace Honorato](https://github.com/WallaceHS20)<br>
 <br>
 
 ### Tutorial para rodar o Projeto
