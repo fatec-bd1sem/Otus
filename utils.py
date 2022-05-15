@@ -53,9 +53,11 @@ def procurar_comando(frase):
     from desempenho import desempenho
     from guia_de_estudo import guia_de_estudo
     from auxiliar import auxiliar
+    from consult_artigo import artigo
 
-    comandos = ['agenda','desempenho','guia','auxiliar']
-    funcoes = [agenda, desempenho, guia_de_estudo, auxiliar]
+
+    comandos = ['agenda','desempenho','guia','auxiliar','artigos']
+    funcoes = [agenda, desempenho, guia_de_estudo, auxiliar, artigo]
 
     encontrado = False
     
