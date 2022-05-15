@@ -51,11 +51,11 @@ def procurar_comando(frase):
     #importa funções dos demais arquivos
     from agenda import agenda
     from desempenho import desempenho
-    from quiz import quiz
+    from guia_de_estudo import guia_de_estudo
     from auxiliar import auxiliar
 
     comandos = ['agenda','desempenho','guia','auxiliar']
-    funcoes = [agenda, desempenho, quiz, auxiliar]
+    funcoes = [agenda, desempenho, guia_de_estudo, auxiliar]
 
     encontrado = False
     
