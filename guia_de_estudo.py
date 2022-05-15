@@ -134,13 +134,13 @@ def questionario():
         falar("Linguagem de plataforma WEB?")
         falar("Volte mais tarde ! até mais !")
 
-
-#interface
-interface = Tk()
-interface.geometry('800x650+250+5')
-interface.title("Guia de estudo")
-img_fundo = PhotoImage(file="imagens\\fundo_consult.png")
-lab_fundo = Label(interface, image=img_fundo)
-lab_fundo.pack()
-threading.Thread(target=questionario).start() # executar função de consulta simultaneamente com interface
-interface.mainloop() #executa a abertura da interface
+def guia_de_estudo():
+    #interface
+    interface = Tk()
+    interface.geometry('800x650+250+5')
+    interface.title("Guia de estudo")
+    img_fundo = PhotoImage(file="imagens\\fundo_consult.png")
+    lab_fundo = Label(interface, image=img_fundo)
+    lab_fundo.pack()
+    threading.Thread(target=questionario).start() # executar função de consulta simultaneamente com interface
+    interface.mainloop() #executa a abertura da interface
