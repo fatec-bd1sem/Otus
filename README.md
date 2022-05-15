@@ -41,7 +41,10 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  <img src="https://user-images.githubusercontent.com/36649454/168403301-18119c76-ad47-4922-b764-9768e9f49f7d.png" height=250px>
 
 <hr>
- 
+
+ <b>[Tarefas no Jira](https://github.com/fatec-bd1sem/Otus/files/8696015/sprint1.pdf)</b>
+ <br>
+
  <b>Gráfico de Burndown</b>
  <br>
  ![image](https://user-images.githubusercontent.com/59184811/168484736-37a60122-cb39-4e7b-b6a9-21bc38cad026.png)
@@ -56,6 +59,9 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  - Auxiliar de linguagem<br>
 
 <hr> 
+ 
+ <b>[Tarefas no Jira](https://github.com/fatec-bd1sem/Otus/files/8696044/Tarefas_Jira_Sprint_2.pdf)<b/>
+ <br>
  
  <b>Gráfico de Burndown</b>
  <br>
