@@ -14,6 +14,7 @@ def consult_art():
         falar('DIGA O NÚMERO DO ITEM QUE DESEJA PESQUISAR EM VOZ ALTA:')
         threading.Thread(target=tocar, args=["start.mp3"]).start()
         escolha = ouvir() #variavel escolha recebe valor dito pelo usuario
+        threading.Thread(target=tocar, args=["success.mp3"]).start()
         new = 0
 
             #caso escolha seja verdadeira, executa comando para abrir navegador com url pré-determinada
@@ -60,21 +61,20 @@ def consult_art():
             falar("Diga um valor compatível com a lista!") # caso escolha do usuraio seja incompativel com itens da lista
 
 #-------------------------------------------------------------------------------------------------
+def artigo():
+    global interface
+    #DESENVOLVIMENTO DA INTERFACE
+    interface = Tk()
+    interface.geometry('800x650+250+5')
+    interface.title("Artigos úteis Online")
+    interface.configure(background="#0F2027")
+    texto = ttk.Label(interface, text="DIGA O NÚMERO DO ITEM QUE DESEJE PESQUISAR EM VOZ ALTA: ", font=("Arial 17"),
+                      foreground='white', background='#0F2027')
+    texto.place(relx=0.5, rely=0.4, anchor='center')
+    texto = ttk.Label(interface, text="[ 1 ] LÓGICA DE PROGRAMAÇÃO\n\n[ 2 ] LINGUAGEM PYTHON\n\n[ 3 ] MySQL\n\n[ 4 ] LINGUAGEM JAVA\n\n[ 5 ] LINGUAGEM PHP\n\n[ 6 ] LINGUAGEM C#", font=("Arial 17"),
+                      foreground='white', background='#0F2027')
+    texto.place(relx=0.3, rely=0.7, anchor='center')
+    threading.Thread(target=consult_art).start() # executar função de consulta simultaneamente com interface
 
-#DESENVOLVIMENTO DA INTERFACE
-interface = Tk()
-interface.geometry('800x650+250+5')
-interface.title("Artigos úteis Online")
-img_fundo = PhotoImage(file="imagens\\fundo_consult.png")
-lab_fundo = Label(interface, image=img_fundo)
-lab_fundo.pack()
-texto = ttk.Label(interface, text="DIGA O NÚMERO DO ITEM QUE DESEJE PESQUISAR EM VOZ ALTA: ", font=("Arial 17"),
-                  foreground='white', background='#0F2027')
-texto.place(relx=0.5, rely=0.4, anchor='center')
-texto = ttk.Label(interface, text="[ 1 ] LÓGICA DE PROGRAMAÇÃO\n\n[ 2 ] LINGUAGEM PYTHON\n\n[ 3 ] MySQL\n\n[ 4 ] LINGUAGEM JAVA\n\n[ 5 ] LINGUAGEM PHP\n\n[ 6 ] LINGUAGEM C#", font=("Arial 17"),
-                  foreground='white', background='#0F2027')
-texto.place(relx=0.3, rely=0.7, anchor='center')
-threading.Thread(target=consult_art).start() # executar função de consulta simultaneamente com interface
 
-
-interface.mainloop() #executa a abertura da interface
+    interface.mainloop() #executa a abertura da interface
