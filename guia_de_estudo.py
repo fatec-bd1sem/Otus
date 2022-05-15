@@ -1,8 +1,8 @@
-from utils import tocar
+import pathlib
+from PIL import ImageTk
 from tkinter import ttk
 from tkinter import *
-from utils import falar
-from utils import ouvir
+from utils import falar, ouvir, tocar
 import threading
 
 #função para limitar resposta apenas para sim e não
@@ -35,8 +35,6 @@ def limpar():
 
 #programa
 def questionario():
-
-
     texto = ttk.Label(interface, text="BEM VINDO AO GUIDA DE ESTUDOS", font=("Arial 17"), foreground='white', background='#0F2027')
     texto.place(relx=0.5, rely=0.5, anchor='center')
     texto = ttk.Label(interface, text="IREI AJUDAR A ENCONTRAR UMA NOVA TECNOLOGIA PARA VOCÊ ESTUDAR !",font=("Arial 15"),foreground='white', background='#0F2027')
@@ -134,13 +132,18 @@ def questionario():
         falar("Linguagem de plataforma WEB?")
         falar("Volte mais tarde ! até mais !")
 
+
+
+#interface
+#tela do guia
 def guia_de_estudo():
-    #interface
+    global interface
     interface = Tk()
     interface.geometry('800x650+250+5')
     interface.title("Guia de estudo")
-    img_fundo = PhotoImage(file="imagens\\fundo_consult.png")
-    lab_fundo = Label(interface, image=img_fundo)
-    lab_fundo.pack()
+    interface.configure(background="#0F2027")
+    #img_fundo = PhotoImage(file="imagens/fundo_consult.png")
+    #lab_fundo = Label(interface, image=img_fundo)
+    #lab_fundo.pack()
     threading.Thread(target=questionario).start() # executar função de consulta simultaneamente com interface
     interface.mainloop() #executa a abertura da interface
