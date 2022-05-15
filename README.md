@@ -28,7 +28,7 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  - Auxiliar de linguagem (Desejável)
  - Dicas e boas práticas de programação (Imprescindível)
  - Calculadora lógica (Imprescindível)
- - Music Player 
+ - Music Player (Desejável)
  <hr>
 
 ## Cronograma
