@@ -40,7 +40,6 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  <img src="https://user-images.githubusercontent.com/36649454/168403057-93a92485-1d42-47ca-b38b-170c97ce6f61.png" height=250px>
  <img src="https://user-images.githubusercontent.com/36649454/168403301-18119c76-ad47-4922-b764-9768e9f49f7d.png" height=250px>
 
-
 <hr>
  
  <b>Gráfico de Burndown</b>
@@ -51,13 +50,19 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 
 
 <details>
- <summary>2º sprint - 25/04 á 15/05</summary>
+ <summary>2º sprint - 25/04 á 15/05</summary><br>
  - Guia de estudos<br>
- <br>
  - Busca por artigos<br>
- <br>
  - Auxiliar de linguagem<br>
+
+<hr> 
+ 
+ <b>Gráfico de Burndown</b>
+ <br>
+ ![image](https://user-images.githubusercontent.com/59184811/168485529-45118439-b08c-407c-9c9c-c268228f491d.png)
+
  </details>
+ 
  <details>
  <summary>3º sprint - 16/05 á 27/05</summary>
  </details>
