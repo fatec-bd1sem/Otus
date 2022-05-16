@@ -51,10 +51,13 @@ def procurar_comando(frase):
     #importa funções dos demais arquivos
     from agenda import agenda
     from desempenho import desempenho
-    from quiz import quiz
+    from guia_de_estudo import guia_de_estudo
+    from auxiliar import auxiliar
+    from consult_artigo import artigo
 
-    comandos = ['agenda','desempenho','guia']
-    funcoes = [agenda, desempenho, quiz]
+
+    comandos = ['agenda','desempenho','guia','auxiliar','artigos']
+    funcoes = [agenda, desempenho, guia_de_estudo, auxiliar, artigo]
 
     encontrado = False
     
@@ -149,15 +152,25 @@ def enviar_tarefa(data, tarefa, tempo):
     shutil.move(out.name, 'dados_agenda.json')
 
 #Janela de pergunta    
-def agendar_tarefa(janela, pergunta):
-    from tkinter import Label
+def agendar_tarefa(pergunta):
+    from tkinter import Label, Tk
+    
+    #Tema interface
+    janela = Tk()
+    #Tamanho interface
+    janela.geometry('300x200')
+    janela.configure(background="#0F2027")
+    janela.title("Assistente Virtual OTUS")
+    
     #Limpa tela
     for componente in janela.winfo_children():
         componente.destroy()
-        
+
     #Formatacao e fonte pergunta
     label_pergunta = Label(janela, text=pergunta,font = ('Helvetica', 15, 'bold'),background="#0F2027",foreground="#FFFFFF")
     label_pergunta.place(relx=0.5, rely=0.5, anchor='center')
+
+    janela.mainloop()
 
 #FUNÇÕES DE NOTIFICAÇÃO -------------------------------------------------
 
@@ -202,3 +215,49 @@ def notificar_lembretes_hoje():
                 lembrete = f"> estudar {tecnologia} por {horas} horas\n"
                 #notifica lembrete final
                 notificar("Lembrete",lembrete, hoje, idx)
+
+#FUNÇÕES DE AUXILIAR DE LINGUAGEM ------------------------------------------
+def codigos_linguagens():
+    #abre arquivo .json com informações
+    with open('codigos_exemplo.json','r') as arquivo:
+        import json
+        codigos_exemplo = arquivo.read()
+        codigos_exemplo = json.loads(codigos_exemplo)
+    #retorna informações
+    return codigos_exemplo
+
+def tela(texto):
+        from tkinter import Label, Tk
+
+        #Tema interface
+        janela = Tk()
+        #Tamanho interface
+        janela.geometry('900x600')
+        janela.configure(background="#0F2027")
+        janela.title("Assistente Virtual OTUS")
+        
+        #Limpa tela
+        for componente in janela.winfo_children():
+            componente.destroy()
+
+        #Formatacao e fonte pergunta
+        label_pergunta = Label(janela, text=texto,font = ('Helvetica', 15, 'bold'),background="#0F2027",foreground="#FFFFFF")
+        label_pergunta.place(relx=0.5, rely=0.2, anchor='center')
+
+        janela.mainloop()
+
+def apresentar_codigo_exemplo(funcao,linguagem):
+    import unicodedata
+    from auxiliar import auxiliar
+    #pega códigos de exemplo
+    code_exemplos = codigos_linguagens()
+    try:
+        funcao = funcao.lower()
+        funcao = unicodedata.normalize("NFD",funcao)
+        funcao = funcao.encode("ascii","ignore")
+        funcao = funcao.decode("utf-8")
+        linguagem = linguagem.lower()
+        code_exemplos = code_exemplos[funcao][linguagem]
+        tela(f"Exemplo:\n{code_exemplos}")
+    except:
+        auxiliar()

@@ -1,7 +1,8 @@
+from tkinter.messagebox import NO
+
+
 def agenda():
-    from utils import enviar_tarefa
-    from tkinter import Tk
-    from utils import agendar_tarefa
+    from utils import enviar_tarefa, agendar_tarefa, tocar
     from datetime import datetime
     import threading
     
@@ -9,61 +10,47 @@ def agenda():
     def coletar_dia():
         from utils import ouvir
         try:
+            threading.Thread(target=tocar, args=["start.mp3"]).start()
             dia = int(ouvir())
             if dia != None:
-                janela = Tk()
-                janela.geometry("300x200")
-                janela.configure(background="#0F2027")
-                janela.title("Assistente Virtual OTUS")
-                agendar_tarefa(janela,"Qual tarefa deseja estudar?")
-                threading.Thread(target=coletar_tarefa).start()
-                janela.mainloop()
-            return dia
+                ano = int(datetime.today().strftime('%Y'))
+                diaa= int(datetime.today().strftime('%d'))
+                mes = int(datetime.today().strftime('%m'))
+                if dia <= diaa:
+                    mes = mes+1
+                    if mes == 13:
+                        mes = 1
+                        ano = ano+1 
+                if dia < 10:
+                    dia = str(f"0{dia}")
+                if mes < 10:
+                    mes = str(f"0{mes}")
+                data = str(f"{dia}/{mes}/{ano}")
+                threading.Thread(target=coletar_tarefa, args=[data]).start()
+                agendar_tarefa("Qual tarefa deseja estudar?")
         except:
             return coletar_dia()
     
     #Armazenando tarefa
-    def coletar_tarefa():
+    def coletar_tarefa(data):
         from utils import ouvir
+        threading.Thread(target=tocar, args=["start.mp3"]).start()
         tarefa = str(ouvir())
         if tarefa != None:
-            janela = Tk()
-            janela.geometry("300x200")
-            janela.configure(background="#0F2027")
-            janela.title("Assistente Virtual OTUS")
-            agendar_tarefa(janela,"Quanto tempo deseja estudar?")
-            threading.Thread(target=coletar_tempo).start()
-            janela.mainloop()
-        return tarefa
+            threading.Thread(target=coletar_tempo, args=[data,tarefa]).start()
+            agendar_tarefa("Quantas horas deseja estudar?")
     
     #Armazenando tempo
-    def coletar_tempo():
+    def coletar_tempo(data, tarefa):
         from utils import ouvir
         try:
+            threading.Thread(target=tocar, args=["start.mp3"]).start()
             tempo = float(ouvir())
-            return tempo
+            if tempo != None:
+                enviar_tarefa(data, tarefa, tempo)
+                agendar_tarefa("Tarefa Agendada!")
         except:
-            return coletar_tempo()
-        
-    #Tema interface
-    janela = Tk()
-
-    #Tamanho interface
-    janela.geometry('300x200')
-    janela.configure(background="#0F2027")
-    janela.title("Assistente Virtual OTUS") 
-
-    #Pergunta dia 
-    agendar_tarefa(janela,"Qual dia deseja estudar?")
+            return coletar_tempo(data, tarefa)
+ 
     threading.Thread(target=coletar_dia).start()
-    janela.mainloop()
-
-    #Pegando data atual
-    mes = str(datetime.today().strftime('%m'))
-    ano = str(datetime.today().strftime('%Y'))
-    #Pegando do arquivo agenda
-    dia = coletar_dia()
-    data = str(f"{dia}/{mes}/{ano}")
-    tarefa = coletar_tarefa()
-    tempo = coletar_tempo()
-    enviar_tarefa(data, tarefa, tempo)
+    agendar_tarefa("Qual dia deseja estudar?")
