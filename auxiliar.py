@@ -11,7 +11,7 @@ def auxiliar():
             funcao = str(ouvir())
             if funcao != None:
                 threading.Thread(target=coletar_linguagem, args=[funcao]).start()
-                tela(f"{funcao} em qual linguagem?\n-PHP    -JavaScript\n-Python   -Java\n-C++")
+                tela(f"{funcao} em qual linguagem?\n-PHP\n-JavaScript\n-Python\n-Java\n-C++")
         except:
             return coletar_funcao()
 
@@ -25,4 +25,4 @@ def auxiliar():
             return coletar_funcao()
 
     threading.Thread(target=coletar_funcao).start()
-    tela("Qual função está buscando?\n-Condições   -Laços de repetição\n-Variáveis   -Biblioteca\n-Funções   -Classes")
+    tela("Qual função está buscando?\n-Condições\n-Laços de repetição\n-Variáveis\n-Biblioteca\n-Funções\n-Classes")
