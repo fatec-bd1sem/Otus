@@ -42,6 +42,7 @@ def tocar(audio):
     mixer.music.play()
 
 def falar(frase):
+    import pyttsx3
     #iniciando fala
     engine = pyttsx3.init()
     engine.say(frase)  
@@ -54,10 +55,11 @@ def procurar_comando(frase):
     from guia_de_estudo import guia_de_estudo
     from auxiliar import auxiliar
     from consult_artigo import artigo
+    from calculadora import calculadora
+    
 
-
-    comandos = ['agenda','desempenho','guia','auxiliar','artigos']
-    funcoes = [agenda, desempenho, guia_de_estudo, auxiliar, artigo]
+    comandos = ['agenda','desempenho','guia','auxiliar','artigos', 'calculadora']
+    funcoes = [agenda, desempenho, guia_de_estudo, auxiliar, artigo, calculadora]
 
     encontrado = False
     
