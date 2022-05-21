@@ -1,4 +1,7 @@
 #FUNÇÕES INTERFACE ----------------------------------------------------
+from tkinter import LEFT
+
+
 def comando_botao_ouvir():
     from utils import ouvir, procurar_comando, tocar
     tocar('start.mp3')
@@ -243,7 +246,7 @@ def tela(texto):
             componente.destroy()
 
         #Formatacao e fonte pergunta
-        label_pergunta = Label(janela, text=texto,font = ('Helvetica', 15, 'bold'),background="#0F2027",foreground="#FFFFFF")
+        label_pergunta = Label(janela, justify=LEFT, text=texto,font = ('Helvetica', 15, 'bold'),background="#0F2027",foreground="#FFFFFF", anchor='e')
         label_pergunta.place(relx=0.5, rely=0.2, anchor='center')
 
         janela.mainloop()
