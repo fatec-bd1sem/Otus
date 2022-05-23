@@ -59,7 +59,7 @@ def Interface_principal():
     im6=Image.open(caminho_pasta+"/imagens/dica.png")
     minhaimgem6= ImageTk.PhotoImage(im6)
     image6= Label (nossaTela, image=minhaimgem6,
-                    compound= TOP,text = "Abrir Dicas",background="#0F2027",foreground="#FFFFFF")
+                    compound= TOP,text = "Dica",background="#0F2027",foreground="#FFFFFF")
 
     image6.image=minhaimgem6
     image6.place(x=445,y=210)
