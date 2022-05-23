@@ -59,10 +59,11 @@ def procurar_comando(frase):
     from auxiliar import auxiliar
     from consult_artigo import artigo
     from calculadora import calculadora
+    from dicas import dicas as dica
     
 
-    comandos = ['agenda','desempenho','guia','auxiliar','artigos', 'calculadora']
-    funcoes = [agenda, desempenho, guia_de_estudo, auxiliar, artigo, calculadora]
+    comandos = ['agenda','desempenho','guia','auxiliar','artigos', 'calculadora', 'dica']
+    funcoes = [agenda, desempenho, guia_de_estudo, auxiliar, artigo, calculadora, dica]
 
     encontrado = False
     
