@@ -35,7 +35,7 @@ def limpar():
 
 #programa
 def questionario():
-    texto = ttk.Label(interface, text="BEM VINDO AO GUIDA DE ESTUDOS", font=("Arial 17"), foreground='white', background='#0F2027')
+    texto = ttk.Label(interface, text="BEM VINDO AO GUIA DE ESTUDOS", font=("Arial 17"), foreground='white', background='#0F2027')
     texto.place(relx=0.5, rely=0.5, anchor='center')
     texto = ttk.Label(interface, text="IREI AJUDAR A ENCONTRAR UMA NOVA TECNOLOGIA PARA VOCÊ ESTUDAR !",font=("Arial 15"),foreground='white', background='#0F2027')
     texto.place(relx=0.5, rely=0.6, anchor='center')

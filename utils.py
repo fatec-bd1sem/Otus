@@ -42,6 +42,7 @@ def tocar(audio):
     mixer.music.play()
 
 def falar(frase):
+    import pyttsx3
     #iniciando fala
     engine = pyttsx3.init()
     engine.say(frase)  
@@ -82,6 +83,7 @@ def procurar_comando(frase):
 
 def ouvir():
     import speech_recognition as sr
+    import os
     comando_encontrado = False
     rec = sr.Recognizer()
     
