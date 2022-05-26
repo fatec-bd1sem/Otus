@@ -12,7 +12,7 @@ def plano_cartesiano():
     fundo.image = image
     fundo.pack()
     interface.geometry('800x650+250+5')
-    interface.title("Guia de estudo")
+    interface.title("Plano Cartesiano")
     texto = ttk.Label(interface, text="Produto Cartesiano!", font=("Arial 17"),
                       foreground='white', background='#0F2027')
     texto.place(relx=0.5, rely=0.4, anchor='center')
