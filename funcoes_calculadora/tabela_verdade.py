@@ -27,8 +27,8 @@ def tabela_verdade():
     
 
     palavras = frase.split()
-    palavras_chave = ['e', 'ou']
-    funcoes = [conjuncao, disjuncao]
+    palavras_chave = ['e', 'ou', 'se', 'igual', 'desigual']
+    funcoes = [conjuncao, disjuncao, implicacao, bicondicional, exclusive_disjunction]
     
     for palavra in palavras:
         if palavra in palavras_chave:
