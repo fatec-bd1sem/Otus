@@ -4,7 +4,7 @@ def plano_cartesiano():
     sys.path.append('')
     
     print('função plano_cartesiano chamada')
-        global interface
+    global interface
     interface = Tk()
     image = Image.open("imagens\\fundo_consult.png")
     photo = ImageTk.PhotoImage(image, master=interface)
