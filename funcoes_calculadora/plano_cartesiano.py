@@ -3,6 +3,14 @@ def plano_cartesiano():
     import sys
     sys.path.append('')
     
+    from utils import falar, ouvir, tocar
+    import threading
+    from tkinter import *
+    from PIL import ImageTk, Image
+    from tkinter import ttk, Tk
+    import tkinter as tk
+    from guia_de_estudo import refinar
+    
     print('função plano_cartesiano chamada')
     global interface
     interface = Tk()
