@@ -159,6 +159,10 @@ pip install matplotlib
 pip install Pillow
 ```
 
+```
+pip install truth-table-generator
+```
+
 4. Execute o arquivo principal.py na pasta `Otus`
 
 </details>
