@@ -124,43 +124,7 @@ pip install PyAudio-0.2.11-cp310-cp310-win_amd64.whl
 ```
 
 ```
-pip install SpeechRecognition
-```
-
-```
-pip install keyboard
-```
-
-```
-pip install pyttsx3
-```
-
-```
-pip install tk
-```
-
-```
-pip install ttkthemes
-```
-
-```
-pip install tkcalendar
-```
-
-```
-pip install pygame
-```
- 
-```
-pip install matplotlib
-```
-
-```
-pip install Pillow
-```
-
-```
-pip install truth-table-generator
+pip install SpeechRecognition keyboard pyttsx3 tk ttkthemes tkcalendar pygame matplotlib Pillow truth-table-generator
 ```
 
 4. Execute o arquivo principal.py na pasta `Otus`
