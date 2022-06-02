@@ -11,6 +11,21 @@ def plano_cartesiano():
     import tkinter as tk
     from guia_de_estudo import refinar
     
+    #FUNÇÃO PARA LIMPAR LABEL
+def limpar():
+    texto = ttk.Label(interface, text="IREI AJUDAR A ENCONTRAR UMA NOVA TECNOLOGIA PARA VOCÊ ESTUDAR !",
+                      font=("Arial 20"), foreground='#0F2027', background='#0F2027')
+    texto.place(relx=0.5, rely=0.5) #Ff#fu
+
+#FUNÇÃO PARA LIMPAR LABEL CONJUNTOS
+def limparF():
+    texto2 = ttk.Label(interface, text="&&&&&&&&&&&&&&&&&&&&&&&&&&&",
+                      font=("Arial 20"), foreground='#0F2027', background='#0F2027')
+    texto2.place(relx=0.1, rely=0.6)
+
+    texto2 = ttk.Label(interface, text="&&&&&&&&&&&&&&&&&&&&&&&&&&&&",font=("Arial 25"), foreground='#0F2027', background='#0F2027')
+    texto2.place(relx=0.1, rely=0.8,)
+    
     print('função plano_cartesiano chamada')
     global interface
     interface = Tk()
