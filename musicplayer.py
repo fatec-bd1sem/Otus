@@ -52,28 +52,28 @@ class MP:
             mixer.music.unpause()
             self.playing_state = False
             self.pause_resume.set('Pause')
+def musicplayer():
+    # Iniciar a Musica aleatoria automaticamente
+    folder = str(pathlib.Path().resolve())
+    path = f"{folder}\musicas"
+    file = os.path.join(path, random.choice(os.listdir(path)))
+    mixer.init()
+    mixer.music.load(file)
+    mixer.music.play()
+        
+    #DESENVOLVIMENTO DA INTERFACE
+      
+    root= Tk()   
+    image = Image.open(f"{folder}/imagens/imgmusic.png")
+    photo = ImageTk.PhotoImage(image)
+    fundo = Label(root, image=photo,
+                        background= "#0F2027")
+    fundo.image = image
+    fundo.place(x=50, y=20)
+    fundo.pack()
 
-# Iniciar a Musica aleatoria automaticamente
-folder = str(pathlib.Path().resolve())
-path = f"{folder}\musicas"
-file = os.path.join(path, random.choice(os.listdir(path)))
-mixer.init()
-mixer.music.load(file)
-mixer.music.play()
-    
-#DESENVOLVIMENTO DA INTERFACE
-  
-root= Tk()   
-image = Image.open(f"{folder}/imagens/imgmusic.png")
-photo = ImageTk.PhotoImage(image)
-fundo = Label(root, image=photo,
-                    background= "#0F2027")
-fundo.image = image
-fundo.place(x=50, y=20)
-fundo.pack()
 
-
-MP(root)
-root.configure(background="#0F2027")
-root.mainloop()
+    MP(root)
+    root.configure(background="#0F2027")
+    root.mainloop()
 

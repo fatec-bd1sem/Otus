@@ -75,7 +75,7 @@ def Interface_principal():
     im8=Image.open(caminho_pasta+"/imagens/musicplayer.png")
     minhaimgem8= ImageTk.PhotoImage(im8)
     image8 = Label (nossaTela, image=minhaimgem8,
-                    compound= TOP,text = "Music Player",background="#0F2027",foreground="#FFFFFF")
+                    compound= TOP,text = "Tocar Música",background="#0F2027",foreground="#FFFFFF")
 
     image8.image=minhaimgem8
     image8.place(x=440,y=290)
