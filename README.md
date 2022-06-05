@@ -74,7 +74,16 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
   - Dicas e boas práticas de programação<br>
   - Calculadora lógica<br>
   - Music player<br>
-  
+
+<hr> 
+ 
+ <!-- <b>[Tarefas no Jira](https://github.com/fatec-bd1sem/Otus/files/8696044/Tarefas_Jira_Sprint_2.pdf)<b/> -->
+ <br>
+ 
+ <b>Gráfico de Burndown</b>
+ <br>
+ ![image](https://user-images.githubusercontent.com/59184811/172053967-04975a0d-f20c-468d-accd-427b3ac6f528.png)
+
  </details>
 - Feira de soluções - 15/06 
 <hr>
