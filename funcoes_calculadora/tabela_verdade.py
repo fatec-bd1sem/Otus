@@ -9,20 +9,29 @@ def tabela_verdade():
     frase = ouvir()
 
     ##tabelas verdade
-    def conjuncao(): 
-        print(ttg.Truths(['p', 'q'], ['p and q']))
+    def conjuncao():
+        from utils import tela
+        tela(ttg.Truths(['p', 'q'], ['p and q']))
 
     def disjuncao():
-        print(ttg.Truths(['p', 'q'], ['p or q']))
+        from utils import tela
+        tela(ttg.Truths(['p', 'q'], ['p or q']))
     
     def implicacao():
-        print(ttg.Truths(['p', 'q'], ['p xor q']))
+        from utils import tela
+        tela(ttg.Truths(['p', 'q'], ['p xor q']))
     
     def bicondicional():
-        print(ttg.Truths(['p', 'q'], ['p = q']))
+        from utils import tela
+        tela(ttg.Truths(['p', 'q'], ['p = q']))
     
     def exclusive_disjunction():
-        print(ttg.Truths(['p', 'q'], ['p != q']))
+        from utils import tela
+        tela(ttg.Truths(['p', 'q'], ['p != q']))
+
+    def negacao():
+        from utils import tela 
+        tela(ttg.Truths(['p', 'q'], ['not(p and q)']))
 
     
 
