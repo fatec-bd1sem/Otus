@@ -26,7 +26,7 @@ def tabela_verdade():
         tela(ttg.Truths(['p', 'q'], ['p = q']))
     
     def exclusive_disjunction():
-        from util import tela
+        from utils import tela
         tela(ttg.Truths(['p', 'q'], ['p != q']))
 
     
