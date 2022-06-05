@@ -64,7 +64,7 @@ mixer.music.play()
 #DESENVOLVIMENTO DA INTERFACE
   
 root= Tk()   
-image = Image.open("/imagens/imgmusic.png")
+image = Image.open(f"{folder}/imagens/imgmusic.png")
 photo = ImageTk.PhotoImage(image)
 fundo = Label(root, image=photo,
                     background= "#0F2027")
