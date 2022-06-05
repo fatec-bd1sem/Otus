@@ -1,17 +1,8 @@
-def plano_cartesiano():
-    # zerando caminho para importar funções de diretórios acima
-    import sys
-    sys.path.append('')
-    
-    from utils import falar, ouvir, tocar
-    import threading
-    from tkinter import *
-    from PIL import ImageTk, Image
-    from tkinter import ttk, Tk
-    import tkinter as tk
-    from guia_de_estudo import refinar
-    
-    #FUNÇÃO PARA LIMPAR LABEL
+import os
+import threading
+from tkinter import ttk
+global interface
+
 def limpar():
     texto = ttk.Label(interface, text="IREI AJUDAR A ENCONTRAR UMA NOVA TECNOLOGIA PARA VOCÊ ESTUDAR !",
                       font=("Arial 20"), foreground='#0F2027', background='#0F2027')
@@ -25,7 +16,77 @@ def limparF():
 
     texto2 = ttk.Label(interface, text="&&&&&&&&&&&&&&&&&&&&&&&&&&&&",font=("Arial 25"), foreground='#0F2027', background='#0F2027')
     texto2.place(relx=0.1, rely=0.8,)
-    
+
+def falar(frase):
+    import pyttsx3
+    #iniciando fala
+    engine = pyttsx3.init()
+    engine.say(frase)
+    engine.runAndWait()
+
+def ouvir():
+    import speech_recognition as sr
+    comando_encontrado = False
+    rec = sr.Recognizer()
+
+    while True:
+        # caso tenha encontrado comando, para de ouvir
+        if (comando_encontrado):
+            os.system('cls')
+            break
+
+        # caso não tenha encontrado comando, continua ouvindo
+        else:
+            print('OUVINDO...')
+            with sr.Microphone() as mic:
+                rec.adjust_for_ambient_noise(mic)
+                audio = rec.listen(mic)
+                try:
+                    # envia áudio para o google
+                    frase = rec.recognize_google(audio, language="pt-BR")
+                    print(f'Você disse: {frase}')
+                    return frase
+
+                except:
+                    # speak('please, try again')
+                    print("erro")
+                    pass
+
+def refinar():
+    esc = ""
+    while esc != "sim" or esc != "não":
+        threading.Thread(target=tocar, args=["start.mp3"]).start()
+        esc = ouvir()
+        threading.Thread(target=tocar, args=["success.mp3"]).start()
+        if esc == "sim":
+            return (esc)
+
+        if esc == "não":
+            return (esc)
+
+        else:
+            falar("Diga 'SIM' ou 'NÃO'")
+            print("Diga 'SIM' ou 'NÃO'")
+
+def tocar(audio):
+    from pygame import mixer
+    import pathlib
+    caminho_pasta = str(pathlib.Path().resolve())
+    caminho_audio = f"{caminho_pasta}\Audios\{audio}"
+    mixer.init()
+    mixer.music.load(caminho_audio)
+    mixer.music.play()
+
+def plano_cartesiano():
+    # zerando caminho para importar funções de diretórios acima
+    import sys
+    sys.path.append('')
+
+    import threading
+    from PIL import ImageTk, Image
+    from tkinter import ttk, Tk
+    import tkinter as tk
+
     print('função plano_cartesiano chamada')
     global interface
     interface = Tk()
@@ -41,8 +102,7 @@ def limparF():
     texto.place(relx=0.5, rely=0.4, anchor='center')
     threading.Thread(target=produto_cartesianoP).start() #executar função simultaneamente com interface
     interface.mainloop() #executa a abertura da interface
-    
-    
+
 def produto_cartesianoP():
     receptor = ''
     conjunto_A = []
