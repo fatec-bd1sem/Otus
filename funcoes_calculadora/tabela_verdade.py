@@ -29,6 +29,10 @@ def tabela_verdade():
         from utils import tela
         tela(ttg.Truths(['p', 'q'], ['p != q']))
 
+    def negacao():
+        from utils import tela 
+        tela(ttg.Truths(['p', 'q'], ['not(p and q)']))
+
     
 
     palavras = frase.split()
