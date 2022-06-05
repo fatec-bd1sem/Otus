@@ -70,7 +70,11 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  </details>
  
  <details>
- <summary>3º sprint - 16/05 á 27/05</summary>
+ <summary>3º sprint - 16/05 á 27/05</summary><br>
+  - Dicas e boas práticas de programação<br>
+  - Calculadora lógica<br>
+  - Music player<br>
+  
  </details>
 - Feira de soluções - 15/06 
 <hr>
