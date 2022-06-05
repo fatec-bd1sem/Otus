@@ -34,7 +34,9 @@ class MP:
         self.playing_state = False
     
     def next(self):
-        path = "C:\\Users\\Augusto\\Desktop\\Otus-development\\Otus-development\\musicas"
+        
+        folder = str(pathlib.Path().resolve())
+        path = f"{folder}\musicas"
         file = os.path.join(path, random.choice(os.listdir(path)))
         mixer.init()
         mixer.music.load(file)
@@ -52,7 +54,8 @@ class MP:
             self.pause_resume.set('Pause')
 
 # Iniciar a Musica aleatoria automaticamente
-path = "C:\\Users\\Augusto\\Desktop\\Otus-development\\Otus-development\\musicas"
+folder = str(pathlib.Path().resolve())
+path = f"{folder}\musicas"
 file = os.path.join(path, random.choice(os.listdir(path)))
 mixer.init()
 mixer.music.load(file)
