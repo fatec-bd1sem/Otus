@@ -1,4 +1,11 @@
-
+from tkinter import *
+import tkinter as tk
+from pygame import mixer
+import os 
+import random
+import pathlib
+from PIL import Image
+from PIL import ImageTk
 class MP:
 
   
@@ -46,14 +53,7 @@ class MP:
             self.playing_state = False
             self.pause_resume.set('Pause')
 def musicplayer():
-    from tkinter import *
-    import tkinter as tk
-    from pygame import mixer
-    import os 
-    import random
-    import pathlib
-    from PIL import Image
-    from PIL import ImageTk
+
     # Iniciar a Musica aleatoria automaticamente
     folder = str(pathlib.Path().resolve())
     path = f"{folder}\musicas"
@@ -77,4 +77,3 @@ def musicplayer():
     MP(root)
     root.configure(background="#0F2027")
     root.mainloop()
-
