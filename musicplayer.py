@@ -19,14 +19,11 @@ class MP:
         # Configurações dos botões
         self.play_restart = tk.StringVar()
         self.pause_resume = tk.StringVar()
-        self.play_restart.set('Next')
-        self.pause_resume.set('Pause')
 
-
-        next_button = Button(win, textvariable=self.play_restart, width=10, font=('Arial', 20), command=self.next)
+        next_button = Button(win, text='PRÓXIMA', width=10, font=('Arial', 20), command=self.next)
         next_button.place(x=150, y=270, anchor='center')
 
-        pause_button = Button(win, textvariable=self.pause_resume, width=10, font=('Arial', 20), command=self.pause)
+        pause_button = Button(win, text='PAUSAR', width=10, font=('Arial', 20), command=self.pause)
         pause_button.place(x=150, y=350, anchor='center')
 
 
