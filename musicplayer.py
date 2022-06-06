@@ -61,19 +61,16 @@ def musicplayer():
     mixer.init()
     mixer.music.load(file)
     mixer.music.play()
-        
+
     #DESENVOLVIMENTO DA INTERFACE
-      
-    root= Tk()   
-    image = Image.open(f"{folder}/imagens/imgmusic.png")
-    photo = ImageTk.PhotoImage(image)
-    fundo = Label(root, image=photo,
-                        background= "#0F2027")
+    global interface
+    interface = Tk()
+    image = Image.open("imagens\\imgmusic.png")
+    photo = ImageTk.PhotoImage(image, master=interface)
+    fundo = tk.Label(interface, image=photo)
     fundo.image = image
-    fundo.place(x=50, y=20)
     fundo.pack()
 
-
-    MP(root)
-    root.configure(background="#0F2027")
-    root.mainloop()
+    MP(interface)
+    interface.configure(background="#0F2027")
+    interface.mainloop()
