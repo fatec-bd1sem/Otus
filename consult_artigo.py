@@ -1,10 +1,10 @@
 import webbrowser
-from utils import tocar
-from tkinter import ttk
-from tkinter import *
-from utils import falar
-from utils import ouvir
+from utils import tocar, falar, ouvir
 import threading
+from tkinter import*
+from PIL import ImageTk, Image
+from tkinter import ttk, Tk
+import tkinter as tk
 
 #----------------------------------------------------------------------------------------------------------
 
@@ -67,14 +67,16 @@ def artigo():
     interface = Tk()
     interface.geometry('800x650+250+5')
     interface.title("Artigos úteis Online")
-    interface.configure(background="#0F2027")
+    image = Image.open("imagens/fundo_consult.png")
+    photo = ImageTk.PhotoImage(image, master=interface)
+    fundo = tk.Label(interface, image=photo)
+    fundo.image = image
+    fundo.pack()
     texto = ttk.Label(interface, text="DIGA O NÚMERO DO ITEM QUE DESEJE PESQUISAR EM VOZ ALTA: ", font=("Arial 17"),
                       foreground='white', background='#0F2027')
     texto.place(relx=0.5, rely=0.4, anchor='center')
     texto = ttk.Label(interface, text="[ 1 ] LÓGICA DE PROGRAMAÇÃO\n\n[ 2 ] LINGUAGEM PYTHON\n\n[ 3 ] MySQL\n\n[ 4 ] LINGUAGEM JAVA\n\n[ 5 ] LINGUAGEM PHP\n\n[ 6 ] LINGUAGEM C#", font=("Arial 17"),
                       foreground='white', background='#0F2027')
     texto.place(relx=0.3, rely=0.7, anchor='center')
-    threading.Thread(target=consult_art).start() # executar função de consulta simultaneamente com interface
-
-
+    threading.Thread(target=consult_art).start() #executar função de consulta simultaneamente com interface
     interface.mainloop() #executa a abertura da interface

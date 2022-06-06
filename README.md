@@ -60,7 +60,7 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
 
 <hr> 
  
- <b>[Tarefas no Jira](https://github.com/fatec-bd1sem/Otus/files/8696044/Tarefas_Jira_Sprint_2.pdf)<b/>
+ <b>[Tarefas no Jira](https://github.com/fatec-bd1sem/Otus/files/8696044/Tarefas_Jira_Sprint_2.pdf)</b>
  <br>
  
  <b>Gráfico de Burndown</b>
@@ -70,7 +70,21 @@ O API a ser desenvolvido é uma assistente virtual acionada por comando de voz, 
  </details>
  
  <details>
- <summary>3º sprint - 16/05 á 27/05</summary>
+ <summary>3º sprint - 16/05 á 05/06</summary><br>
+  - Dicas e boas práticas de programação<br>
+  - Calculadora lógica<br>
+  - Music player<br>
+
+
+<hr>
+
+ <b>[Tarefas no Jira](https://github.com/fatec-bd1sem/Otus/files/8840137/Tarefas_Jira_Sprint_3.pdf)<b/>
+ <br>
+ 
+ <b>Gráfico de Burndown</b>
+ <br>
+ ![image](https://user-images.githubusercontent.com/59184811/172053967-04975a0d-f20c-468d-accd-427b3ac6f528.png)
+
  </details>
 - Feira de soluções - 15/06 
 <hr>
@@ -124,39 +138,7 @@ pip install PyAudio-0.2.11-cp310-cp310-win_amd64.whl
 ```
 
 ```
-pip install SpeechRecognition
-```
-
-```
-pip install keyboard
-```
-
-```
-pip install pyttsx3
-```
-
-```
-pip install tk
-```
-
-```
-pip install ttkthemes
-```
-
-```
-pip install tkcalendar
-```
-
-```
-pip install pygame
-```
- 
-```
-pip install matplotlib
-```
-
-```
-pip install Pillow
+pip install SpeechRecognition keyboard pyttsx3 tk ttkthemes tkcalendar pygame matplotlib Pillow truth-table-generator
 ```
 
 4. Execute o arquivo principal.py na pasta `Otus`

@@ -1,4 +1,7 @@
 #FUNÇÕES INTERFACE ----------------------------------------------------
+from tkinter import LEFT
+
+
 def comando_botao_ouvir():
     from utils import ouvir, procurar_comando, tocar
     tocar('start.mp3')
@@ -55,10 +58,13 @@ def procurar_comando(frase):
     from guia_de_estudo import guia_de_estudo
     from auxiliar import auxiliar
     from consult_artigo import artigo
+    from calculadora import calculadora
+    from dicas import dicas as dica
+    from musicplayer import musicplayer
+    
 
-
-    comandos = ['agenda','desempenho','guia','auxiliar','artigos']
-    funcoes = [agenda, desempenho, guia_de_estudo, auxiliar, artigo]
+    comandos = ['agenda','desempenho','guia','auxiliar','artigos', 'calculadora', 'dica', 'tocar']
+    funcoes = [agenda, desempenho, guia_de_estudo, auxiliar, artigo, calculadora, dica, musicplayer]
 
     encontrado = False
     
@@ -243,7 +249,7 @@ def tela(texto):
             componente.destroy()
 
         #Formatacao e fonte pergunta
-        label_pergunta = Label(janela, text=texto,font = ('Helvetica', 15, 'bold'),background="#0F2027",foreground="#FFFFFF")
+        label_pergunta = Label(janela, justify=LEFT, text=texto,font = ('Helvetica', 15, 'bold'),background="#0F2027",foreground="#FFFFFF", anchor='e')
         label_pergunta.place(relx=0.5, rely=0.2, anchor='center')
 
         janela.mainloop()

@@ -1,9 +1,9 @@
-import pathlib
-from PIL import ImageTk
-from tkinter import ttk
 from tkinter import *
 from utils import falar, ouvir, tocar
 import threading
+from PIL import ImageTk, Image
+from tkinter import ttk, Tk
+import tkinter as tk
 
 #função para limitar resposta apenas para sim e não
 def refinar():
@@ -133,17 +133,16 @@ def questionario():
         falar("Volte mais tarde ! até mais !")
 
 
-
 #interface
-#tela do guia
 def guia_de_estudo():
     global interface
     interface = Tk()
+    image = Image.open("imagens\\fundo_consult.png")
+    photo = ImageTk.PhotoImage(image, master=interface)
+    fundo = tk.Label(interface, image=photo)
+    fundo.image = image
+    fundo.pack()
     interface.geometry('800x650+250+5')
     interface.title("Guia de estudo")
-    interface.configure(background="#0F2027")
-    #img_fundo = PhotoImage(file="imagens/fundo_consult.png")
-    #lab_fundo = Label(interface, image=img_fundo)
-    #lab_fundo.pack()
-    threading.Thread(target=questionario).start() # executar função de consulta simultaneamente com interface
+    threading.Thread(target=questionario).start() # executar função simultaneamente com interface
     interface.mainloop() #executa a abertura da interface

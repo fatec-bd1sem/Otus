@@ -59,10 +59,10 @@ def Interface_principal():
     im6=Image.open(caminho_pasta+"/imagens/dica.png")
     minhaimgem6= ImageTk.PhotoImage(im6)
     image6= Label (nossaTela, image=minhaimgem6,
-                    compound= TOP,text = "Abrir Dicas",background="#0F2027",foreground="#FFFFFF")
+                    compound= TOP,text = "Dica",background="#0F2027",foreground="#FFFFFF")
 
     image6.image=minhaimgem6
-    image6.place(x=445,y=210)
+    image6.place(x=449,y=210)
     
     im7=Image.open(caminho_pasta+"/imagens/artigo.png")
     minhaimgem7= ImageTk.PhotoImage(im7)
@@ -71,6 +71,14 @@ def Interface_principal():
 
     image7.image=minhaimgem7
     image7.place(x=301,y=290)
+    
+    im8=Image.open(caminho_pasta+"/imagens/musicplayer.png")
+    minhaimgem8= ImageTk.PhotoImage(im8)
+    image8 = Label (nossaTela, image=minhaimgem8,
+                    compound= TOP,text = "Tocar Música",background="#0F2027",foreground="#FFFFFF")
+
+    image8.image=minhaimgem8
+    image8.place(x=440,y=290)
     
     im9=Image.open(caminho_pasta+"/imagens/otus.png")
     minhaimgem9= ImageTk.PhotoImage(im9)
